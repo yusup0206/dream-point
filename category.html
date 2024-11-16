@@ -1,0 +1,2067 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/dark-logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Dream Point</title>
+  </head>
+  <body class="dark">
+    <header>
+      <nav class="fixed top-0 left-0 z-40 w-full bg-white dark:bg-primary-200">
+        <div class="container">
+          <div
+            class="w-full px-5 py-6 md:py-0 flex items-center justify-between gap-4"
+          >
+            <a href="./index.html" id="logo" class="h-9 md:h-14">
+              <img
+                src="/assets/images/white-logo.svg"
+                alt="White Logo"
+                class="white-logo h-full"
+              />
+              <img
+                src="/assets/images/dark-logo.svg"
+                alt="Dark Logo"
+                class="dark-logo h-full"
+                style="display: none"
+              />
+            </a>
+            <div class="flex items-center justify-center gap-4">
+              <div class="hidden md:flex items-center justify-center gap-4">
+                <!-- active link class="px-[24px] xl:px-[28px] py-[10px] xl:py-[14px] text-lg xl:text-xl font-semibold rounded-[50px] bg-primary-200 dark:bg-primary-100 text-white navlink-shadow" -->
+                <a
+                  href="./category.html"
+                  class="px-[24px] xl:px-[28px] py-[10px] xl:py-[14px] bg-white text-primary-200 text-lg xl:text-xl font-semibold rounded-[50px] hover:bg-primary-200 hover:dark:bg-primary-100 hover:text-white navlink-shadow transition-all"
+                  >Категории</a
+                >
+                <a
+                  href="./partners.html"
+                  class="px-[24px] xl:px-[28px] py-[10px] xl:py-[14px] bg-white text-primary-200 text-lg xl:text-xl font-semibold rounded-[50px] hover:bg-primary-200 hover:dark:bg-primary-100 hover:text-white navlink-shadow transition-all"
+                  >Партнерам</a
+                >
+                <!-- lang dropdown -->
+                <div class="group relative py-6 uppercase">
+                  <span
+                    class="px-[24px] xl:px-[28px] py-[10px] xl:py-[14px] bg-white text-primary-200 text-lg xl:text-xl font-semibold rounded-t-[50px] rounded-b-[50px] group-hover:rounded-t-[25px] group-hover:rounded-b-[0px] flex items-center justify-center gap-[14px] cursor-pointer navlink-shadow"
+                    >Pyc
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="16"
+                      viewBox="0 0 20 16"
+                      fill="none"
+                      class="group-hover:rotate-180 transition-all"
+                    >
+                      <path
+                        d="M2 4L10 12L18 4"
+                        stroke="#4270B7"
+                        stroke-width="4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <div
+                    class="absolute top-24 group-hover:top-[68px] rounded-b-[25px] px-[28px] py-[14px] bg-white flex flex-col items-start justify-center gap-[14px] w-full opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto"
+                  >
+                    <a
+                      href=""
+                      class="text-primary-200 hover:text-primary-100 text-lg xl:text-xl font-semibold transition-all"
+                      >Pyc</a
+                    >
+                    <a
+                      href=""
+                      class="text-primary-200 hover:text-primary-100 text-lg xl:text-xl font-semibold transition-all"
+                      >Pyc</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- theme toggle -->
+              <label class="inline-flex items-center cursor-pointer">
+                <input
+                  type="checkbox"
+                  value=""
+                  class="sr-only peer"
+                  onclick="toggleTheme()"
+                />
+                <div
+                  class="relative w-[72px] md:w-24 h-9 md:h-12 bg-white rounded-full peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0 after:start-[0px] after:bg-primary-200 dark:after:bg-primary-100 after:rounded-full after:h-9 md:after:h-12 after:w-9 md:after:w-12 after:transition-all peer-checked:bg-white navlink-shadow"
+                >
+                  <!-- moon -->
+                  <span
+                    class="absolute top-[10px] md:top-[14px] left-[10px] md:left-[14px] z-10 text-primary-200 dark:text-white"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-4 h-4 md:w-5 md:h-5"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                    >
+                      <path
+                        d="M20 10.9009C19.8248 12.7963 19.1135 14.6025 17.9493 16.1084C16.785 17.6142 15.216 18.7573 13.4257 19.404C11.6355 20.0506 9.69813 20.174 7.84032 19.7598C5.98251 19.3456 4.28109 18.4108 2.93516 17.0648C1.58923 15.7189 0.654449 14.0175 0.240202 12.1597C-0.174046 10.3019 -0.050628 8.3645 0.596015 6.57428C1.24266 4.78405 2.38578 3.215 3.89162 2.05074C5.39746 0.886481 7.20374 0.175155 9.0991 0C7.98942 1.50126 7.45544 3.35094 7.59427 5.21263C7.7331 7.07432 8.53553 8.82434 9.85559 10.1444C11.1757 11.4645 12.9257 12.2669 14.7874 12.4057C16.6491 12.5446 18.4987 12.0106 20 10.9009Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
+
+                  <!-- sun -->
+                  <span
+                    class="absolute top-[10px] md:top-[14px] right-[10px] md:right-[14px] z-10 text-white dark:text-primary-100"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-4 h-4 md:w-5 md:h-5"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M12 16.5455C14.5104 16.5455 16.5455 14.5104 16.5455 12C16.5455 9.48961 14.5104 7.45455 12 7.45455C9.48961 7.45455 7.45455 9.48961 7.45455 12C7.45455 14.5104 9.48961 16.5455 12 16.5455Z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M12 2V3.81818M12 20.1818V22M4.92727 4.92727L6.21818 6.21818M17.7818 17.7818L19.0727 19.0727M2 12H3.81818M20.1818 12H22M4.92727 19.0727L6.21818 17.7818M17.7818 6.21818L19.0727 4.92727M16.5455 12C16.5455 14.5104 14.5104 16.5455 12 16.5455C9.48961 16.5455 7.45455 14.5104 7.45455 12C7.45455 9.48961 9.48961 7.45455 12 7.45455C14.5104 7.45455 16.5455 9.48961 16.5455 12Z"
+                        stroke="currentColor"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main
+      class="bg-white dark:bg-primary-200 w-full min-h-screen pt-[104px] md:pt-[144px] pb-[114px] md:pb-[64px] flex flex-col gap-5 md:gap-10"
+    >
+      <section>
+        <div class="container">
+          <div class="w-full px-5 flex flex-col gap-5">
+            <div
+              class="tab-buttons flex items-center justify-start gap-4 overflow-x-auto"
+            >
+              <!-- active category button -->
+              <button
+                data-tab="1"
+                class="tab-btn active rounded-[30px] md:rounded-[50px] bg-white text-primary-200 text-xs md:text-base font-semibold px-[14px] md:px-[28px] py-[10px] md:py-[14px] border border-primary-200 whitespace-nowrap"
+              >
+                Смартфоны
+              </button>
+              <!-- other category button -->
+              <button
+                data-tab="2"
+                class="tab-btn rounded-[30px] md:rounded-[50px] bg-white hover:bg-primary-200 hover:dark:bg-primary-100 text-primary-200 hover:text-white text-xs md:text-base font-semibold px-[14px] md:px-[28px] py-[10px] md:py-[14px] border border-primary-200 transition-all whitespace-nowrap"
+              >
+                Компьютеры и ноутбуки
+              </button>
+            </div>
+            <div class="tabs">
+              <div
+                data-content="1"
+                class="tab-content active flex flex-col gap-5"
+              >
+                <div
+                  class="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-[28.75px]"
+                >
+                  <!-- card START -->
+                  <div
+                    class="bg-white dark:bg-primary-200 rounded-lg md:rounded-2xl py-[10px] md:py-5 px-[10px] md:px-[22px] card-shadow hover:scale-105 transition-all"
+                  >
+                    <div class="flex flex-col gap-[14px] mb-[22px]">
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Название магазина:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-2 h-[32px] md:h-[40px]"
+                        >
+                          XiaoMi
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Номер телефона:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Адрес:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-3 h-[48px] md:h-[60px]"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      href=""
+                      class="w-full max-w-[189px] rounded-lg bg-primary-100 flex items-center justify-center gap-[14px] text-white text-xs md:text-sm font-bold mx-auto px-2 md:px-[28px] py-[10px] md:py-[14px]"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-4 h-4 md:w-[22px] md:h-[22px]"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M14.6268 5.20487C15.6555 5.40519 16.601 5.90735 17.3421 6.64707C18.0832 7.38679 18.5864 8.33042 18.7871 9.35718M14.6268 1C16.7641 1.23698 18.7572 2.19226 20.2787 3.70899C21.8003 5.22573 22.7599 7.21376 23 9.34666M21.9468 17.7354V20.889C21.948 21.1818 21.8879 21.4716 21.7704 21.7398C21.6529 22.0081 21.4805 22.2489 21.2644 22.4468C21.0482 22.6447 20.793 22.7954 20.5152 22.8892C20.2373 22.983 19.9429 23.0178 19.6507 22.9915C16.4098 22.64 13.2966 21.5346 10.5613 19.7642C8.01656 18.1503 5.85903 15.9968 4.24197 13.4569C2.46198 10.7145 1.35426 7.59218 1.00855 4.34287C0.982229 4.05217 1.01684 3.75919 1.11019 3.48258C1.20353 3.20597 1.35356 2.95178 1.55072 2.73621C1.74788 2.52064 1.98785 2.34841 2.25535 2.23047C2.52286 2.11254 2.81204 2.05149 3.10448 2.05122H6.26417C6.77531 2.0462 7.27084 2.22685 7.65839 2.55952C8.04595 2.89218 8.29909 3.35415 8.37063 3.85931C8.50399 4.86855 8.75132 5.85949 9.10789 6.81323C9.2496 7.18949 9.28026 7.5984 9.19626 7.99152C9.11226 8.38464 8.91711 8.74549 8.63394 9.0313L7.29633 10.3663C8.79567 12.9981 10.9789 15.1772 13.6157 16.6736L14.9533 15.3386C15.2397 15.056 15.6012 14.8612 15.9951 14.7774C16.389 14.6935 16.7987 14.7241 17.1756 14.8656C18.1312 15.2214 19.124 15.4683 20.1352 15.6014C20.6468 15.6734 21.1141 15.9307 21.4481 16.3241C21.7821 16.7176 21.9596 17.2198 21.9468 17.7354Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      ПОЗВОНИТЬ
+                    </a>
+                  </div>
+                  <!-- card END -->
+                  <!-- card START -->
+                  <div
+                    class="bg-white dark:bg-primary-200 rounded-lg md:rounded-2xl py-[10px] md:py-5 px-[10px] md:px-[22px] card-shadow hover:scale-105 transition-all"
+                  >
+                    <div class="flex flex-col gap-[14px] mb-[22px]">
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Название магазина:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-2 h-[32px] md:h-[40px]"
+                        >
+                          XiaoMi
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Номер телефона:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Адрес:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-3 h-[48px] md:h-[60px]"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      href=""
+                      class="w-full max-w-[189px] rounded-lg bg-primary-100 flex items-center justify-center gap-[14px] text-white text-xs md:text-sm font-bold mx-auto px-2 md:px-[28px] py-[10px] md:py-[14px]"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-4 h-4 md:w-[22px] md:h-[22px]"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M14.6268 5.20487C15.6555 5.40519 16.601 5.90735 17.3421 6.64707C18.0832 7.38679 18.5864 8.33042 18.7871 9.35718M14.6268 1C16.7641 1.23698 18.7572 2.19226 20.2787 3.70899C21.8003 5.22573 22.7599 7.21376 23 9.34666M21.9468 17.7354V20.889C21.948 21.1818 21.8879 21.4716 21.7704 21.7398C21.6529 22.0081 21.4805 22.2489 21.2644 22.4468C21.0482 22.6447 20.793 22.7954 20.5152 22.8892C20.2373 22.983 19.9429 23.0178 19.6507 22.9915C16.4098 22.64 13.2966 21.5346 10.5613 19.7642C8.01656 18.1503 5.85903 15.9968 4.24197 13.4569C2.46198 10.7145 1.35426 7.59218 1.00855 4.34287C0.982229 4.05217 1.01684 3.75919 1.11019 3.48258C1.20353 3.20597 1.35356 2.95178 1.55072 2.73621C1.74788 2.52064 1.98785 2.34841 2.25535 2.23047C2.52286 2.11254 2.81204 2.05149 3.10448 2.05122H6.26417C6.77531 2.0462 7.27084 2.22685 7.65839 2.55952C8.04595 2.89218 8.29909 3.35415 8.37063 3.85931C8.50399 4.86855 8.75132 5.85949 9.10789 6.81323C9.2496 7.18949 9.28026 7.5984 9.19626 7.99152C9.11226 8.38464 8.91711 8.74549 8.63394 9.0313L7.29633 10.3663C8.79567 12.9981 10.9789 15.1772 13.6157 16.6736L14.9533 15.3386C15.2397 15.056 15.6012 14.8612 15.9951 14.7774C16.389 14.6935 16.7987 14.7241 17.1756 14.8656C18.1312 15.2214 19.124 15.4683 20.1352 15.6014C20.6468 15.6734 21.1141 15.9307 21.4481 16.3241C21.7821 16.7176 21.9596 17.2198 21.9468 17.7354Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      ПОЗВОНИТЬ
+                    </a>
+                  </div>
+                  <!-- card END -->
+                  <!-- card START -->
+                  <div
+                    class="bg-white dark:bg-primary-200 rounded-lg md:rounded-2xl py-[10px] md:py-5 px-[10px] md:px-[22px] card-shadow hover:scale-105 transition-all"
+                  >
+                    <div class="flex flex-col gap-[14px] mb-[22px]">
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Название магазина:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-2 h-[32px] md:h-[40px]"
+                        >
+                          XiaoMi
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Номер телефона:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Адрес:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-3 h-[48px] md:h-[60px]"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      href=""
+                      class="w-full max-w-[189px] rounded-lg bg-primary-100 flex items-center justify-center gap-[14px] text-white text-xs md:text-sm font-bold mx-auto px-2 md:px-[28px] py-[10px] md:py-[14px]"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-4 h-4 md:w-[22px] md:h-[22px]"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M14.6268 5.20487C15.6555 5.40519 16.601 5.90735 17.3421 6.64707C18.0832 7.38679 18.5864 8.33042 18.7871 9.35718M14.6268 1C16.7641 1.23698 18.7572 2.19226 20.2787 3.70899C21.8003 5.22573 22.7599 7.21376 23 9.34666M21.9468 17.7354V20.889C21.948 21.1818 21.8879 21.4716 21.7704 21.7398C21.6529 22.0081 21.4805 22.2489 21.2644 22.4468C21.0482 22.6447 20.793 22.7954 20.5152 22.8892C20.2373 22.983 19.9429 23.0178 19.6507 22.9915C16.4098 22.64 13.2966 21.5346 10.5613 19.7642C8.01656 18.1503 5.85903 15.9968 4.24197 13.4569C2.46198 10.7145 1.35426 7.59218 1.00855 4.34287C0.982229 4.05217 1.01684 3.75919 1.11019 3.48258C1.20353 3.20597 1.35356 2.95178 1.55072 2.73621C1.74788 2.52064 1.98785 2.34841 2.25535 2.23047C2.52286 2.11254 2.81204 2.05149 3.10448 2.05122H6.26417C6.77531 2.0462 7.27084 2.22685 7.65839 2.55952C8.04595 2.89218 8.29909 3.35415 8.37063 3.85931C8.50399 4.86855 8.75132 5.85949 9.10789 6.81323C9.2496 7.18949 9.28026 7.5984 9.19626 7.99152C9.11226 8.38464 8.91711 8.74549 8.63394 9.0313L7.29633 10.3663C8.79567 12.9981 10.9789 15.1772 13.6157 16.6736L14.9533 15.3386C15.2397 15.056 15.6012 14.8612 15.9951 14.7774C16.389 14.6935 16.7987 14.7241 17.1756 14.8656C18.1312 15.2214 19.124 15.4683 20.1352 15.6014C20.6468 15.6734 21.1141 15.9307 21.4481 16.3241C21.7821 16.7176 21.9596 17.2198 21.9468 17.7354Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      ПОЗВОНИТЬ
+                    </a>
+                  </div>
+                  <!-- card END -->
+                  <!-- card START -->
+                  <div
+                    class="bg-white dark:bg-primary-200 rounded-lg md:rounded-2xl py-[10px] md:py-5 px-[10px] md:px-[22px] card-shadow hover:scale-105 transition-all"
+                  >
+                    <div class="flex flex-col gap-[14px] mb-[22px]">
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Название магазина:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-2 h-[32px] md:h-[40px]"
+                        >
+                          XiaoMi
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Номер телефона:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Адрес:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-3 h-[48px] md:h-[60px]"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      href=""
+                      class="w-full max-w-[189px] rounded-lg bg-primary-100 flex items-center justify-center gap-[14px] text-white text-xs md:text-sm font-bold mx-auto px-2 md:px-[28px] py-[10px] md:py-[14px]"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-4 h-4 md:w-[22px] md:h-[22px]"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M14.6268 5.20487C15.6555 5.40519 16.601 5.90735 17.3421 6.64707C18.0832 7.38679 18.5864 8.33042 18.7871 9.35718M14.6268 1C16.7641 1.23698 18.7572 2.19226 20.2787 3.70899C21.8003 5.22573 22.7599 7.21376 23 9.34666M21.9468 17.7354V20.889C21.948 21.1818 21.8879 21.4716 21.7704 21.7398C21.6529 22.0081 21.4805 22.2489 21.2644 22.4468C21.0482 22.6447 20.793 22.7954 20.5152 22.8892C20.2373 22.983 19.9429 23.0178 19.6507 22.9915C16.4098 22.64 13.2966 21.5346 10.5613 19.7642C8.01656 18.1503 5.85903 15.9968 4.24197 13.4569C2.46198 10.7145 1.35426 7.59218 1.00855 4.34287C0.982229 4.05217 1.01684 3.75919 1.11019 3.48258C1.20353 3.20597 1.35356 2.95178 1.55072 2.73621C1.74788 2.52064 1.98785 2.34841 2.25535 2.23047C2.52286 2.11254 2.81204 2.05149 3.10448 2.05122H6.26417C6.77531 2.0462 7.27084 2.22685 7.65839 2.55952C8.04595 2.89218 8.29909 3.35415 8.37063 3.85931C8.50399 4.86855 8.75132 5.85949 9.10789 6.81323C9.2496 7.18949 9.28026 7.5984 9.19626 7.99152C9.11226 8.38464 8.91711 8.74549 8.63394 9.0313L7.29633 10.3663C8.79567 12.9981 10.9789 15.1772 13.6157 16.6736L14.9533 15.3386C15.2397 15.056 15.6012 14.8612 15.9951 14.7774C16.389 14.6935 16.7987 14.7241 17.1756 14.8656C18.1312 15.2214 19.124 15.4683 20.1352 15.6014C20.6468 15.6734 21.1141 15.9307 21.4481 16.3241C21.7821 16.7176 21.9596 17.2198 21.9468 17.7354Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      ПОЗВОНИТЬ
+                    </a>
+                  </div>
+                  <!-- card END -->
+                  <!-- card START -->
+                  <div
+                    class="bg-white dark:bg-primary-200 rounded-lg md:rounded-2xl py-[10px] md:py-5 px-[10px] md:px-[22px] card-shadow hover:scale-105 transition-all"
+                  >
+                    <div class="flex flex-col gap-[14px] mb-[22px]">
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Название магазина:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-2 h-[32px] md:h-[40px]"
+                        >
+                          XiaoMi
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Номер телефона:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Адрес:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-3 h-[48px] md:h-[60px]"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      href=""
+                      class="w-full max-w-[189px] rounded-lg bg-primary-100 flex items-center justify-center gap-[14px] text-white text-xs md:text-sm font-bold mx-auto px-2 md:px-[28px] py-[10px] md:py-[14px]"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-4 h-4 md:w-[22px] md:h-[22px]"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M14.6268 5.20487C15.6555 5.40519 16.601 5.90735 17.3421 6.64707C18.0832 7.38679 18.5864 8.33042 18.7871 9.35718M14.6268 1C16.7641 1.23698 18.7572 2.19226 20.2787 3.70899C21.8003 5.22573 22.7599 7.21376 23 9.34666M21.9468 17.7354V20.889C21.948 21.1818 21.8879 21.4716 21.7704 21.7398C21.6529 22.0081 21.4805 22.2489 21.2644 22.4468C21.0482 22.6447 20.793 22.7954 20.5152 22.8892C20.2373 22.983 19.9429 23.0178 19.6507 22.9915C16.4098 22.64 13.2966 21.5346 10.5613 19.7642C8.01656 18.1503 5.85903 15.9968 4.24197 13.4569C2.46198 10.7145 1.35426 7.59218 1.00855 4.34287C0.982229 4.05217 1.01684 3.75919 1.11019 3.48258C1.20353 3.20597 1.35356 2.95178 1.55072 2.73621C1.74788 2.52064 1.98785 2.34841 2.25535 2.23047C2.52286 2.11254 2.81204 2.05149 3.10448 2.05122H6.26417C6.77531 2.0462 7.27084 2.22685 7.65839 2.55952C8.04595 2.89218 8.29909 3.35415 8.37063 3.85931C8.50399 4.86855 8.75132 5.85949 9.10789 6.81323C9.2496 7.18949 9.28026 7.5984 9.19626 7.99152C9.11226 8.38464 8.91711 8.74549 8.63394 9.0313L7.29633 10.3663C8.79567 12.9981 10.9789 15.1772 13.6157 16.6736L14.9533 15.3386C15.2397 15.056 15.6012 14.8612 15.9951 14.7774C16.389 14.6935 16.7987 14.7241 17.1756 14.8656C18.1312 15.2214 19.124 15.4683 20.1352 15.6014C20.6468 15.6734 21.1141 15.9307 21.4481 16.3241C21.7821 16.7176 21.9596 17.2198 21.9468 17.7354Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      ПОЗВОНИТЬ
+                    </a>
+                  </div>
+                  <!-- card END -->
+                  <!-- card START -->
+                  <div
+                    class="bg-white dark:bg-primary-200 rounded-lg md:rounded-2xl py-[10px] md:py-5 px-[10px] md:px-[22px] card-shadow hover:scale-105 transition-all"
+                  >
+                    <div class="flex flex-col gap-[14px] mb-[22px]">
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Название магазина:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-2 h-[32px] md:h-[40px]"
+                        >
+                          XiaoMi
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Номер телефона:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Адрес:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-3 h-[48px] md:h-[60px]"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      href=""
+                      class="w-full max-w-[189px] rounded-lg bg-primary-100 flex items-center justify-center gap-[14px] text-white text-xs md:text-sm font-bold mx-auto px-2 md:px-[28px] py-[10px] md:py-[14px]"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-4 h-4 md:w-[22px] md:h-[22px]"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M14.6268 5.20487C15.6555 5.40519 16.601 5.90735 17.3421 6.64707C18.0832 7.38679 18.5864 8.33042 18.7871 9.35718M14.6268 1C16.7641 1.23698 18.7572 2.19226 20.2787 3.70899C21.8003 5.22573 22.7599 7.21376 23 9.34666M21.9468 17.7354V20.889C21.948 21.1818 21.8879 21.4716 21.7704 21.7398C21.6529 22.0081 21.4805 22.2489 21.2644 22.4468C21.0482 22.6447 20.793 22.7954 20.5152 22.8892C20.2373 22.983 19.9429 23.0178 19.6507 22.9915C16.4098 22.64 13.2966 21.5346 10.5613 19.7642C8.01656 18.1503 5.85903 15.9968 4.24197 13.4569C2.46198 10.7145 1.35426 7.59218 1.00855 4.34287C0.982229 4.05217 1.01684 3.75919 1.11019 3.48258C1.20353 3.20597 1.35356 2.95178 1.55072 2.73621C1.74788 2.52064 1.98785 2.34841 2.25535 2.23047C2.52286 2.11254 2.81204 2.05149 3.10448 2.05122H6.26417C6.77531 2.0462 7.27084 2.22685 7.65839 2.55952C8.04595 2.89218 8.29909 3.35415 8.37063 3.85931C8.50399 4.86855 8.75132 5.85949 9.10789 6.81323C9.2496 7.18949 9.28026 7.5984 9.19626 7.99152C9.11226 8.38464 8.91711 8.74549 8.63394 9.0313L7.29633 10.3663C8.79567 12.9981 10.9789 15.1772 13.6157 16.6736L14.9533 15.3386C15.2397 15.056 15.6012 14.8612 15.9951 14.7774C16.389 14.6935 16.7987 14.7241 17.1756 14.8656C18.1312 15.2214 19.124 15.4683 20.1352 15.6014C20.6468 15.6734 21.1141 15.9307 21.4481 16.3241C21.7821 16.7176 21.9596 17.2198 21.9468 17.7354Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      ПОЗВОНИТЬ
+                    </a>
+                  </div>
+                  <!-- card END -->
+                  <!-- card START -->
+                  <div
+                    class="bg-white dark:bg-primary-200 rounded-lg md:rounded-2xl py-[10px] md:py-5 px-[10px] md:px-[22px] card-shadow hover:scale-105 transition-all"
+                  >
+                    <div class="flex flex-col gap-[14px] mb-[22px]">
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Название магазина:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-2 h-[32px] md:h-[40px]"
+                        >
+                          XiaoMi
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Номер телефона:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Адрес:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-3 h-[48px] md:h-[60px]"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      href=""
+                      class="w-full max-w-[189px] rounded-lg bg-primary-100 flex items-center justify-center gap-[14px] text-white text-xs md:text-sm font-bold mx-auto px-2 md:px-[28px] py-[10px] md:py-[14px]"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-4 h-4 md:w-[22px] md:h-[22px]"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M14.6268 5.20487C15.6555 5.40519 16.601 5.90735 17.3421 6.64707C18.0832 7.38679 18.5864 8.33042 18.7871 9.35718M14.6268 1C16.7641 1.23698 18.7572 2.19226 20.2787 3.70899C21.8003 5.22573 22.7599 7.21376 23 9.34666M21.9468 17.7354V20.889C21.948 21.1818 21.8879 21.4716 21.7704 21.7398C21.6529 22.0081 21.4805 22.2489 21.2644 22.4468C21.0482 22.6447 20.793 22.7954 20.5152 22.8892C20.2373 22.983 19.9429 23.0178 19.6507 22.9915C16.4098 22.64 13.2966 21.5346 10.5613 19.7642C8.01656 18.1503 5.85903 15.9968 4.24197 13.4569C2.46198 10.7145 1.35426 7.59218 1.00855 4.34287C0.982229 4.05217 1.01684 3.75919 1.11019 3.48258C1.20353 3.20597 1.35356 2.95178 1.55072 2.73621C1.74788 2.52064 1.98785 2.34841 2.25535 2.23047C2.52286 2.11254 2.81204 2.05149 3.10448 2.05122H6.26417C6.77531 2.0462 7.27084 2.22685 7.65839 2.55952C8.04595 2.89218 8.29909 3.35415 8.37063 3.85931C8.50399 4.86855 8.75132 5.85949 9.10789 6.81323C9.2496 7.18949 9.28026 7.5984 9.19626 7.99152C9.11226 8.38464 8.91711 8.74549 8.63394 9.0313L7.29633 10.3663C8.79567 12.9981 10.9789 15.1772 13.6157 16.6736L14.9533 15.3386C15.2397 15.056 15.6012 14.8612 15.9951 14.7774C16.389 14.6935 16.7987 14.7241 17.1756 14.8656C18.1312 15.2214 19.124 15.4683 20.1352 15.6014C20.6468 15.6734 21.1141 15.9307 21.4481 16.3241C21.7821 16.7176 21.9596 17.2198 21.9468 17.7354Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      ПОЗВОНИТЬ
+                    </a>
+                  </div>
+                  <!-- card END -->
+                  <!-- card START -->
+                  <div
+                    class="bg-white dark:bg-primary-200 rounded-lg md:rounded-2xl py-[10px] md:py-5 px-[10px] md:px-[22px] card-shadow hover:scale-105 transition-all"
+                  >
+                    <div class="flex flex-col gap-[14px] mb-[22px]">
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Название магазина:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-2 h-[32px] md:h-[40px]"
+                        >
+                          XiaoMi
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Номер телефона:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Адрес:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-3 h-[48px] md:h-[60px]"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      href=""
+                      class="w-full max-w-[189px] rounded-lg bg-primary-100 flex items-center justify-center gap-[14px] text-white text-xs md:text-sm font-bold mx-auto px-2 md:px-[28px] py-[10px] md:py-[14px]"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-4 h-4 md:w-[22px] md:h-[22px]"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M14.6268 5.20487C15.6555 5.40519 16.601 5.90735 17.3421 6.64707C18.0832 7.38679 18.5864 8.33042 18.7871 9.35718M14.6268 1C16.7641 1.23698 18.7572 2.19226 20.2787 3.70899C21.8003 5.22573 22.7599 7.21376 23 9.34666M21.9468 17.7354V20.889C21.948 21.1818 21.8879 21.4716 21.7704 21.7398C21.6529 22.0081 21.4805 22.2489 21.2644 22.4468C21.0482 22.6447 20.793 22.7954 20.5152 22.8892C20.2373 22.983 19.9429 23.0178 19.6507 22.9915C16.4098 22.64 13.2966 21.5346 10.5613 19.7642C8.01656 18.1503 5.85903 15.9968 4.24197 13.4569C2.46198 10.7145 1.35426 7.59218 1.00855 4.34287C0.982229 4.05217 1.01684 3.75919 1.11019 3.48258C1.20353 3.20597 1.35356 2.95178 1.55072 2.73621C1.74788 2.52064 1.98785 2.34841 2.25535 2.23047C2.52286 2.11254 2.81204 2.05149 3.10448 2.05122H6.26417C6.77531 2.0462 7.27084 2.22685 7.65839 2.55952C8.04595 2.89218 8.29909 3.35415 8.37063 3.85931C8.50399 4.86855 8.75132 5.85949 9.10789 6.81323C9.2496 7.18949 9.28026 7.5984 9.19626 7.99152C9.11226 8.38464 8.91711 8.74549 8.63394 9.0313L7.29633 10.3663C8.79567 12.9981 10.9789 15.1772 13.6157 16.6736L14.9533 15.3386C15.2397 15.056 15.6012 14.8612 15.9951 14.7774C16.389 14.6935 16.7987 14.7241 17.1756 14.8656C18.1312 15.2214 19.124 15.4683 20.1352 15.6014C20.6468 15.6734 21.1141 15.9307 21.4481 16.3241C21.7821 16.7176 21.9596 17.2198 21.9468 17.7354Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      ПОЗВОНИТЬ
+                    </a>
+                  </div>
+                  <!-- card END -->
+                  <!-- card START -->
+                  <div
+                    class="bg-white dark:bg-primary-200 rounded-lg md:rounded-2xl py-[10px] md:py-5 px-[10px] md:px-[22px] card-shadow hover:scale-105 transition-all"
+                  >
+                    <div class="flex flex-col gap-[14px] mb-[22px]">
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Название магазина:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-2 h-[32px] md:h-[40px]"
+                        >
+                          XiaoMi
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Номер телефона:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Адрес:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-3 h-[48px] md:h-[60px]"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      href=""
+                      class="w-full max-w-[189px] rounded-lg bg-primary-100 flex items-center justify-center gap-[14px] text-white text-xs md:text-sm font-bold mx-auto px-2 md:px-[28px] py-[10px] md:py-[14px]"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-4 h-4 md:w-[22px] md:h-[22px]"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M14.6268 5.20487C15.6555 5.40519 16.601 5.90735 17.3421 6.64707C18.0832 7.38679 18.5864 8.33042 18.7871 9.35718M14.6268 1C16.7641 1.23698 18.7572 2.19226 20.2787 3.70899C21.8003 5.22573 22.7599 7.21376 23 9.34666M21.9468 17.7354V20.889C21.948 21.1818 21.8879 21.4716 21.7704 21.7398C21.6529 22.0081 21.4805 22.2489 21.2644 22.4468C21.0482 22.6447 20.793 22.7954 20.5152 22.8892C20.2373 22.983 19.9429 23.0178 19.6507 22.9915C16.4098 22.64 13.2966 21.5346 10.5613 19.7642C8.01656 18.1503 5.85903 15.9968 4.24197 13.4569C2.46198 10.7145 1.35426 7.59218 1.00855 4.34287C0.982229 4.05217 1.01684 3.75919 1.11019 3.48258C1.20353 3.20597 1.35356 2.95178 1.55072 2.73621C1.74788 2.52064 1.98785 2.34841 2.25535 2.23047C2.52286 2.11254 2.81204 2.05149 3.10448 2.05122H6.26417C6.77531 2.0462 7.27084 2.22685 7.65839 2.55952C8.04595 2.89218 8.29909 3.35415 8.37063 3.85931C8.50399 4.86855 8.75132 5.85949 9.10789 6.81323C9.2496 7.18949 9.28026 7.5984 9.19626 7.99152C9.11226 8.38464 8.91711 8.74549 8.63394 9.0313L7.29633 10.3663C8.79567 12.9981 10.9789 15.1772 13.6157 16.6736L14.9533 15.3386C15.2397 15.056 15.6012 14.8612 15.9951 14.7774C16.389 14.6935 16.7987 14.7241 17.1756 14.8656C18.1312 15.2214 19.124 15.4683 20.1352 15.6014C20.6468 15.6734 21.1141 15.9307 21.4481 16.3241C21.7821 16.7176 21.9596 17.2198 21.9468 17.7354Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      ПОЗВОНИТЬ
+                    </a>
+                  </div>
+                  <!-- card END -->
+                  <!-- card START -->
+                  <div
+                    class="bg-white dark:bg-primary-200 rounded-lg md:rounded-2xl py-[10px] md:py-5 px-[10px] md:px-[22px] card-shadow hover:scale-105 transition-all"
+                  >
+                    <div class="flex flex-col gap-[14px] mb-[22px]">
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Название магазина:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-2 h-[32px] md:h-[40px]"
+                        >
+                          XiaoMi
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Номер телефона:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Адрес:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-3 h-[48px] md:h-[60px]"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      href=""
+                      class="w-full max-w-[189px] rounded-lg bg-primary-100 flex items-center justify-center gap-[14px] text-white text-xs md:text-sm font-bold mx-auto px-2 md:px-[28px] py-[10px] md:py-[14px]"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-4 h-4 md:w-[22px] md:h-[22px]"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M14.6268 5.20487C15.6555 5.40519 16.601 5.90735 17.3421 6.64707C18.0832 7.38679 18.5864 8.33042 18.7871 9.35718M14.6268 1C16.7641 1.23698 18.7572 2.19226 20.2787 3.70899C21.8003 5.22573 22.7599 7.21376 23 9.34666M21.9468 17.7354V20.889C21.948 21.1818 21.8879 21.4716 21.7704 21.7398C21.6529 22.0081 21.4805 22.2489 21.2644 22.4468C21.0482 22.6447 20.793 22.7954 20.5152 22.8892C20.2373 22.983 19.9429 23.0178 19.6507 22.9915C16.4098 22.64 13.2966 21.5346 10.5613 19.7642C8.01656 18.1503 5.85903 15.9968 4.24197 13.4569C2.46198 10.7145 1.35426 7.59218 1.00855 4.34287C0.982229 4.05217 1.01684 3.75919 1.11019 3.48258C1.20353 3.20597 1.35356 2.95178 1.55072 2.73621C1.74788 2.52064 1.98785 2.34841 2.25535 2.23047C2.52286 2.11254 2.81204 2.05149 3.10448 2.05122H6.26417C6.77531 2.0462 7.27084 2.22685 7.65839 2.55952C8.04595 2.89218 8.29909 3.35415 8.37063 3.85931C8.50399 4.86855 8.75132 5.85949 9.10789 6.81323C9.2496 7.18949 9.28026 7.5984 9.19626 7.99152C9.11226 8.38464 8.91711 8.74549 8.63394 9.0313L7.29633 10.3663C8.79567 12.9981 10.9789 15.1772 13.6157 16.6736L14.9533 15.3386C15.2397 15.056 15.6012 14.8612 15.9951 14.7774C16.389 14.6935 16.7987 14.7241 17.1756 14.8656C18.1312 15.2214 19.124 15.4683 20.1352 15.6014C20.6468 15.6734 21.1141 15.9307 21.4481 16.3241C21.7821 16.7176 21.9596 17.2198 21.9468 17.7354Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      ПОЗВОНИТЬ
+                    </a>
+                  </div>
+                  <!-- card END -->
+                  <!-- card START -->
+                  <div
+                    class="bg-white dark:bg-primary-200 rounded-lg md:rounded-2xl py-[10px] md:py-5 px-[10px] md:px-[22px] card-shadow hover:scale-105 transition-all"
+                  >
+                    <div class="flex flex-col gap-[14px] mb-[22px]">
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Название магазина:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-2 h-[32px] md:h-[40px]"
+                        >
+                          XiaoMi
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Номер телефона:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Адрес:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-3 h-[48px] md:h-[60px]"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      href=""
+                      class="w-full max-w-[189px] rounded-lg bg-primary-100 flex items-center justify-center gap-[14px] text-white text-xs md:text-sm font-bold mx-auto px-2 md:px-[28px] py-[10px] md:py-[14px]"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-4 h-4 md:w-[22px] md:h-[22px]"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M14.6268 5.20487C15.6555 5.40519 16.601 5.90735 17.3421 6.64707C18.0832 7.38679 18.5864 8.33042 18.7871 9.35718M14.6268 1C16.7641 1.23698 18.7572 2.19226 20.2787 3.70899C21.8003 5.22573 22.7599 7.21376 23 9.34666M21.9468 17.7354V20.889C21.948 21.1818 21.8879 21.4716 21.7704 21.7398C21.6529 22.0081 21.4805 22.2489 21.2644 22.4468C21.0482 22.6447 20.793 22.7954 20.5152 22.8892C20.2373 22.983 19.9429 23.0178 19.6507 22.9915C16.4098 22.64 13.2966 21.5346 10.5613 19.7642C8.01656 18.1503 5.85903 15.9968 4.24197 13.4569C2.46198 10.7145 1.35426 7.59218 1.00855 4.34287C0.982229 4.05217 1.01684 3.75919 1.11019 3.48258C1.20353 3.20597 1.35356 2.95178 1.55072 2.73621C1.74788 2.52064 1.98785 2.34841 2.25535 2.23047C2.52286 2.11254 2.81204 2.05149 3.10448 2.05122H6.26417C6.77531 2.0462 7.27084 2.22685 7.65839 2.55952C8.04595 2.89218 8.29909 3.35415 8.37063 3.85931C8.50399 4.86855 8.75132 5.85949 9.10789 6.81323C9.2496 7.18949 9.28026 7.5984 9.19626 7.99152C9.11226 8.38464 8.91711 8.74549 8.63394 9.0313L7.29633 10.3663C8.79567 12.9981 10.9789 15.1772 13.6157 16.6736L14.9533 15.3386C15.2397 15.056 15.6012 14.8612 15.9951 14.7774C16.389 14.6935 16.7987 14.7241 17.1756 14.8656C18.1312 15.2214 19.124 15.4683 20.1352 15.6014C20.6468 15.6734 21.1141 15.9307 21.4481 16.3241C21.7821 16.7176 21.9596 17.2198 21.9468 17.7354Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      ПОЗВОНИТЬ
+                    </a>
+                  </div>
+                  <!-- card END -->
+                  <!-- card START -->
+                  <div
+                    class="bg-white dark:bg-primary-200 rounded-lg md:rounded-2xl py-[10px] md:py-5 px-[10px] md:px-[22px] card-shadow hover:scale-105 transition-all"
+                  >
+                    <div class="flex flex-col gap-[14px] mb-[22px]">
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Название магазина:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-2 h-[32px] md:h-[40px]"
+                        >
+                          XiaoMi
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Номер телефона:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Адрес:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-3 h-[48px] md:h-[60px]"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      href=""
+                      class="w-full max-w-[189px] rounded-lg bg-primary-100 flex items-center justify-center gap-[14px] text-white text-xs md:text-sm font-bold mx-auto px-2 md:px-[28px] py-[10px] md:py-[14px]"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-4 h-4 md:w-[22px] md:h-[22px]"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M14.6268 5.20487C15.6555 5.40519 16.601 5.90735 17.3421 6.64707C18.0832 7.38679 18.5864 8.33042 18.7871 9.35718M14.6268 1C16.7641 1.23698 18.7572 2.19226 20.2787 3.70899C21.8003 5.22573 22.7599 7.21376 23 9.34666M21.9468 17.7354V20.889C21.948 21.1818 21.8879 21.4716 21.7704 21.7398C21.6529 22.0081 21.4805 22.2489 21.2644 22.4468C21.0482 22.6447 20.793 22.7954 20.5152 22.8892C20.2373 22.983 19.9429 23.0178 19.6507 22.9915C16.4098 22.64 13.2966 21.5346 10.5613 19.7642C8.01656 18.1503 5.85903 15.9968 4.24197 13.4569C2.46198 10.7145 1.35426 7.59218 1.00855 4.34287C0.982229 4.05217 1.01684 3.75919 1.11019 3.48258C1.20353 3.20597 1.35356 2.95178 1.55072 2.73621C1.74788 2.52064 1.98785 2.34841 2.25535 2.23047C2.52286 2.11254 2.81204 2.05149 3.10448 2.05122H6.26417C6.77531 2.0462 7.27084 2.22685 7.65839 2.55952C8.04595 2.89218 8.29909 3.35415 8.37063 3.85931C8.50399 4.86855 8.75132 5.85949 9.10789 6.81323C9.2496 7.18949 9.28026 7.5984 9.19626 7.99152C9.11226 8.38464 8.91711 8.74549 8.63394 9.0313L7.29633 10.3663C8.79567 12.9981 10.9789 15.1772 13.6157 16.6736L14.9533 15.3386C15.2397 15.056 15.6012 14.8612 15.9951 14.7774C16.389 14.6935 16.7987 14.7241 17.1756 14.8656C18.1312 15.2214 19.124 15.4683 20.1352 15.6014C20.6468 15.6734 21.1141 15.9307 21.4481 16.3241C21.7821 16.7176 21.9596 17.2198 21.9468 17.7354Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      ПОЗВОНИТЬ
+                    </a>
+                  </div>
+                  <!-- card END -->
+                </div>
+                <div class="w-full flex items-center justify-center">
+                  <a
+                    href=""
+                    class="text-primary-200 text-sm font-bold px-[28px] py-[10px] md:py-[14px] rounded-lg bg-white uppercase navlink-shadow hover:bg-primary-200 hover:dark:bg-primary-100 hover:text-white transition-all"
+                    >ПОКАЗАТЬ ЕЩЕ</a
+                  >
+                </div>
+              </div>
+              <div
+                data-content="2"
+                class="tab-content hiddenTab flex flex-col gap-5"
+              >
+                <div
+                  class="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-[28.75px]"
+                >
+                  <!-- card START -->
+                  <div
+                    class="bg-white dark:bg-primary-200 rounded-lg md:rounded-2xl py-[10px] md:py-5 px-[10px] md:px-[22px] card-shadow hover:scale-105 transition-all"
+                  >
+                    <div class="flex flex-col gap-[14px] mb-[22px]">
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Название магазина:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-2 h-[32px] md:h-[40px]"
+                        >
+                          XiaoMi
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Номер телефона:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Адрес:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-3 h-[48px] md:h-[60px]"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      href=""
+                      class="w-full max-w-[189px] rounded-lg bg-primary-100 flex items-center justify-center gap-[14px] text-white text-xs md:text-sm font-bold mx-auto px-2 md:px-[28px] py-[10px] md:py-[14px]"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-4 h-4 md:w-[22px] md:h-[22px]"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M14.6268 5.20487C15.6555 5.40519 16.601 5.90735 17.3421 6.64707C18.0832 7.38679 18.5864 8.33042 18.7871 9.35718M14.6268 1C16.7641 1.23698 18.7572 2.19226 20.2787 3.70899C21.8003 5.22573 22.7599 7.21376 23 9.34666M21.9468 17.7354V20.889C21.948 21.1818 21.8879 21.4716 21.7704 21.7398C21.6529 22.0081 21.4805 22.2489 21.2644 22.4468C21.0482 22.6447 20.793 22.7954 20.5152 22.8892C20.2373 22.983 19.9429 23.0178 19.6507 22.9915C16.4098 22.64 13.2966 21.5346 10.5613 19.7642C8.01656 18.1503 5.85903 15.9968 4.24197 13.4569C2.46198 10.7145 1.35426 7.59218 1.00855 4.34287C0.982229 4.05217 1.01684 3.75919 1.11019 3.48258C1.20353 3.20597 1.35356 2.95178 1.55072 2.73621C1.74788 2.52064 1.98785 2.34841 2.25535 2.23047C2.52286 2.11254 2.81204 2.05149 3.10448 2.05122H6.26417C6.77531 2.0462 7.27084 2.22685 7.65839 2.55952C8.04595 2.89218 8.29909 3.35415 8.37063 3.85931C8.50399 4.86855 8.75132 5.85949 9.10789 6.81323C9.2496 7.18949 9.28026 7.5984 9.19626 7.99152C9.11226 8.38464 8.91711 8.74549 8.63394 9.0313L7.29633 10.3663C8.79567 12.9981 10.9789 15.1772 13.6157 16.6736L14.9533 15.3386C15.2397 15.056 15.6012 14.8612 15.9951 14.7774C16.389 14.6935 16.7987 14.7241 17.1756 14.8656C18.1312 15.2214 19.124 15.4683 20.1352 15.6014C20.6468 15.6734 21.1141 15.9307 21.4481 16.3241C21.7821 16.7176 21.9596 17.2198 21.9468 17.7354Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      ПОЗВОНИТЬ
+                    </a>
+                  </div>
+                  <!-- card END -->
+                  <!-- card START -->
+                  <div
+                    class="bg-white dark:bg-primary-200 rounded-lg md:rounded-2xl py-[10px] md:py-5 px-[10px] md:px-[22px] card-shadow hover:scale-105 transition-all"
+                  >
+                    <div class="flex flex-col gap-[14px] mb-[22px]">
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Название магазина:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-2 h-[32px] md:h-[40px]"
+                        >
+                          XiaoMi
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Номер телефона:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Адрес:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-3 h-[48px] md:h-[60px]"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      href=""
+                      class="w-full max-w-[189px] rounded-lg bg-primary-100 flex items-center justify-center gap-[14px] text-white text-xs md:text-sm font-bold mx-auto px-2 md:px-[28px] py-[10px] md:py-[14px]"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-4 h-4 md:w-[22px] md:h-[22px]"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M14.6268 5.20487C15.6555 5.40519 16.601 5.90735 17.3421 6.64707C18.0832 7.38679 18.5864 8.33042 18.7871 9.35718M14.6268 1C16.7641 1.23698 18.7572 2.19226 20.2787 3.70899C21.8003 5.22573 22.7599 7.21376 23 9.34666M21.9468 17.7354V20.889C21.948 21.1818 21.8879 21.4716 21.7704 21.7398C21.6529 22.0081 21.4805 22.2489 21.2644 22.4468C21.0482 22.6447 20.793 22.7954 20.5152 22.8892C20.2373 22.983 19.9429 23.0178 19.6507 22.9915C16.4098 22.64 13.2966 21.5346 10.5613 19.7642C8.01656 18.1503 5.85903 15.9968 4.24197 13.4569C2.46198 10.7145 1.35426 7.59218 1.00855 4.34287C0.982229 4.05217 1.01684 3.75919 1.11019 3.48258C1.20353 3.20597 1.35356 2.95178 1.55072 2.73621C1.74788 2.52064 1.98785 2.34841 2.25535 2.23047C2.52286 2.11254 2.81204 2.05149 3.10448 2.05122H6.26417C6.77531 2.0462 7.27084 2.22685 7.65839 2.55952C8.04595 2.89218 8.29909 3.35415 8.37063 3.85931C8.50399 4.86855 8.75132 5.85949 9.10789 6.81323C9.2496 7.18949 9.28026 7.5984 9.19626 7.99152C9.11226 8.38464 8.91711 8.74549 8.63394 9.0313L7.29633 10.3663C8.79567 12.9981 10.9789 15.1772 13.6157 16.6736L14.9533 15.3386C15.2397 15.056 15.6012 14.8612 15.9951 14.7774C16.389 14.6935 16.7987 14.7241 17.1756 14.8656C18.1312 15.2214 19.124 15.4683 20.1352 15.6014C20.6468 15.6734 21.1141 15.9307 21.4481 16.3241C21.7821 16.7176 21.9596 17.2198 21.9468 17.7354Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      ПОЗВОНИТЬ
+                    </a>
+                  </div>
+                  <!-- card END -->
+                  <!-- card START -->
+                  <div
+                    class="bg-white dark:bg-primary-200 rounded-lg md:rounded-2xl py-[10px] md:py-5 px-[10px] md:px-[22px] card-shadow hover:scale-105 transition-all"
+                  >
+                    <div class="flex flex-col gap-[14px] mb-[22px]">
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Название магазина:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-2 h-[32px] md:h-[40px]"
+                        >
+                          XiaoMi
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Номер телефона:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Адрес:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-3 h-[48px] md:h-[60px]"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      href=""
+                      class="w-full max-w-[189px] rounded-lg bg-primary-100 flex items-center justify-center gap-[14px] text-white text-xs md:text-sm font-bold mx-auto px-2 md:px-[28px] py-[10px] md:py-[14px]"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-4 h-4 md:w-[22px] md:h-[22px]"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M14.6268 5.20487C15.6555 5.40519 16.601 5.90735 17.3421 6.64707C18.0832 7.38679 18.5864 8.33042 18.7871 9.35718M14.6268 1C16.7641 1.23698 18.7572 2.19226 20.2787 3.70899C21.8003 5.22573 22.7599 7.21376 23 9.34666M21.9468 17.7354V20.889C21.948 21.1818 21.8879 21.4716 21.7704 21.7398C21.6529 22.0081 21.4805 22.2489 21.2644 22.4468C21.0482 22.6447 20.793 22.7954 20.5152 22.8892C20.2373 22.983 19.9429 23.0178 19.6507 22.9915C16.4098 22.64 13.2966 21.5346 10.5613 19.7642C8.01656 18.1503 5.85903 15.9968 4.24197 13.4569C2.46198 10.7145 1.35426 7.59218 1.00855 4.34287C0.982229 4.05217 1.01684 3.75919 1.11019 3.48258C1.20353 3.20597 1.35356 2.95178 1.55072 2.73621C1.74788 2.52064 1.98785 2.34841 2.25535 2.23047C2.52286 2.11254 2.81204 2.05149 3.10448 2.05122H6.26417C6.77531 2.0462 7.27084 2.22685 7.65839 2.55952C8.04595 2.89218 8.29909 3.35415 8.37063 3.85931C8.50399 4.86855 8.75132 5.85949 9.10789 6.81323C9.2496 7.18949 9.28026 7.5984 9.19626 7.99152C9.11226 8.38464 8.91711 8.74549 8.63394 9.0313L7.29633 10.3663C8.79567 12.9981 10.9789 15.1772 13.6157 16.6736L14.9533 15.3386C15.2397 15.056 15.6012 14.8612 15.9951 14.7774C16.389 14.6935 16.7987 14.7241 17.1756 14.8656C18.1312 15.2214 19.124 15.4683 20.1352 15.6014C20.6468 15.6734 21.1141 15.9307 21.4481 16.3241C21.7821 16.7176 21.9596 17.2198 21.9468 17.7354Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      ПОЗВОНИТЬ
+                    </a>
+                  </div>
+                  <!-- card END -->
+                  <!-- card START -->
+                  <div
+                    class="bg-white dark:bg-primary-200 rounded-lg md:rounded-2xl py-[10px] md:py-5 px-[10px] md:px-[22px] card-shadow hover:scale-105 transition-all"
+                  >
+                    <div class="flex flex-col gap-[14px] mb-[22px]">
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Название магазина:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-2 h-[32px] md:h-[40px]"
+                        >
+                          XiaoMi
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Номер телефона:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Адрес:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-3 h-[48px] md:h-[60px]"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      href=""
+                      class="w-full max-w-[189px] rounded-lg bg-primary-100 flex items-center justify-center gap-[14px] text-white text-xs md:text-sm font-bold mx-auto px-2 md:px-[28px] py-[10px] md:py-[14px]"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-4 h-4 md:w-[22px] md:h-[22px]"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M14.6268 5.20487C15.6555 5.40519 16.601 5.90735 17.3421 6.64707C18.0832 7.38679 18.5864 8.33042 18.7871 9.35718M14.6268 1C16.7641 1.23698 18.7572 2.19226 20.2787 3.70899C21.8003 5.22573 22.7599 7.21376 23 9.34666M21.9468 17.7354V20.889C21.948 21.1818 21.8879 21.4716 21.7704 21.7398C21.6529 22.0081 21.4805 22.2489 21.2644 22.4468C21.0482 22.6447 20.793 22.7954 20.5152 22.8892C20.2373 22.983 19.9429 23.0178 19.6507 22.9915C16.4098 22.64 13.2966 21.5346 10.5613 19.7642C8.01656 18.1503 5.85903 15.9968 4.24197 13.4569C2.46198 10.7145 1.35426 7.59218 1.00855 4.34287C0.982229 4.05217 1.01684 3.75919 1.11019 3.48258C1.20353 3.20597 1.35356 2.95178 1.55072 2.73621C1.74788 2.52064 1.98785 2.34841 2.25535 2.23047C2.52286 2.11254 2.81204 2.05149 3.10448 2.05122H6.26417C6.77531 2.0462 7.27084 2.22685 7.65839 2.55952C8.04595 2.89218 8.29909 3.35415 8.37063 3.85931C8.50399 4.86855 8.75132 5.85949 9.10789 6.81323C9.2496 7.18949 9.28026 7.5984 9.19626 7.99152C9.11226 8.38464 8.91711 8.74549 8.63394 9.0313L7.29633 10.3663C8.79567 12.9981 10.9789 15.1772 13.6157 16.6736L14.9533 15.3386C15.2397 15.056 15.6012 14.8612 15.9951 14.7774C16.389 14.6935 16.7987 14.7241 17.1756 14.8656C18.1312 15.2214 19.124 15.4683 20.1352 15.6014C20.6468 15.6734 21.1141 15.9307 21.4481 16.3241C21.7821 16.7176 21.9596 17.2198 21.9468 17.7354Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      ПОЗВОНИТЬ
+                    </a>
+                  </div>
+                  <!-- card END -->
+                  <!-- card START -->
+                  <div
+                    class="bg-white dark:bg-primary-200 rounded-lg md:rounded-2xl py-[10px] md:py-5 px-[10px] md:px-[22px] card-shadow hover:scale-105 transition-all"
+                  >
+                    <div class="flex flex-col gap-[14px] mb-[22px]">
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Название магазина:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-2 h-[32px] md:h-[40px]"
+                        >
+                          XiaoMi
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Номер телефона:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Адрес:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-3 h-[48px] md:h-[60px]"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      href=""
+                      class="w-full max-w-[189px] rounded-lg bg-primary-100 flex items-center justify-center gap-[14px] text-white text-xs md:text-sm font-bold mx-auto px-2 md:px-[28px] py-[10px] md:py-[14px]"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-4 h-4 md:w-[22px] md:h-[22px]"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M14.6268 5.20487C15.6555 5.40519 16.601 5.90735 17.3421 6.64707C18.0832 7.38679 18.5864 8.33042 18.7871 9.35718M14.6268 1C16.7641 1.23698 18.7572 2.19226 20.2787 3.70899C21.8003 5.22573 22.7599 7.21376 23 9.34666M21.9468 17.7354V20.889C21.948 21.1818 21.8879 21.4716 21.7704 21.7398C21.6529 22.0081 21.4805 22.2489 21.2644 22.4468C21.0482 22.6447 20.793 22.7954 20.5152 22.8892C20.2373 22.983 19.9429 23.0178 19.6507 22.9915C16.4098 22.64 13.2966 21.5346 10.5613 19.7642C8.01656 18.1503 5.85903 15.9968 4.24197 13.4569C2.46198 10.7145 1.35426 7.59218 1.00855 4.34287C0.982229 4.05217 1.01684 3.75919 1.11019 3.48258C1.20353 3.20597 1.35356 2.95178 1.55072 2.73621C1.74788 2.52064 1.98785 2.34841 2.25535 2.23047C2.52286 2.11254 2.81204 2.05149 3.10448 2.05122H6.26417C6.77531 2.0462 7.27084 2.22685 7.65839 2.55952C8.04595 2.89218 8.29909 3.35415 8.37063 3.85931C8.50399 4.86855 8.75132 5.85949 9.10789 6.81323C9.2496 7.18949 9.28026 7.5984 9.19626 7.99152C9.11226 8.38464 8.91711 8.74549 8.63394 9.0313L7.29633 10.3663C8.79567 12.9981 10.9789 15.1772 13.6157 16.6736L14.9533 15.3386C15.2397 15.056 15.6012 14.8612 15.9951 14.7774C16.389 14.6935 16.7987 14.7241 17.1756 14.8656C18.1312 15.2214 19.124 15.4683 20.1352 15.6014C20.6468 15.6734 21.1141 15.9307 21.4481 16.3241C21.7821 16.7176 21.9596 17.2198 21.9468 17.7354Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      ПОЗВОНИТЬ
+                    </a>
+                  </div>
+                  <!-- card END -->
+                  <!-- card START -->
+                  <div
+                    class="bg-white dark:bg-primary-200 rounded-lg md:rounded-2xl py-[10px] md:py-5 px-[10px] md:px-[22px] card-shadow hover:scale-105 transition-all"
+                  >
+                    <div class="flex flex-col gap-[14px] mb-[22px]">
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Название магазина:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-2 h-[32px] md:h-[40px]"
+                        >
+                          XiaoMi
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Номер телефона:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Адрес:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-3 h-[48px] md:h-[60px]"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      href=""
+                      class="w-full max-w-[189px] rounded-lg bg-primary-100 flex items-center justify-center gap-[14px] text-white text-xs md:text-sm font-bold mx-auto px-2 md:px-[28px] py-[10px] md:py-[14px]"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-4 h-4 md:w-[22px] md:h-[22px]"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M14.6268 5.20487C15.6555 5.40519 16.601 5.90735 17.3421 6.64707C18.0832 7.38679 18.5864 8.33042 18.7871 9.35718M14.6268 1C16.7641 1.23698 18.7572 2.19226 20.2787 3.70899C21.8003 5.22573 22.7599 7.21376 23 9.34666M21.9468 17.7354V20.889C21.948 21.1818 21.8879 21.4716 21.7704 21.7398C21.6529 22.0081 21.4805 22.2489 21.2644 22.4468C21.0482 22.6447 20.793 22.7954 20.5152 22.8892C20.2373 22.983 19.9429 23.0178 19.6507 22.9915C16.4098 22.64 13.2966 21.5346 10.5613 19.7642C8.01656 18.1503 5.85903 15.9968 4.24197 13.4569C2.46198 10.7145 1.35426 7.59218 1.00855 4.34287C0.982229 4.05217 1.01684 3.75919 1.11019 3.48258C1.20353 3.20597 1.35356 2.95178 1.55072 2.73621C1.74788 2.52064 1.98785 2.34841 2.25535 2.23047C2.52286 2.11254 2.81204 2.05149 3.10448 2.05122H6.26417C6.77531 2.0462 7.27084 2.22685 7.65839 2.55952C8.04595 2.89218 8.29909 3.35415 8.37063 3.85931C8.50399 4.86855 8.75132 5.85949 9.10789 6.81323C9.2496 7.18949 9.28026 7.5984 9.19626 7.99152C9.11226 8.38464 8.91711 8.74549 8.63394 9.0313L7.29633 10.3663C8.79567 12.9981 10.9789 15.1772 13.6157 16.6736L14.9533 15.3386C15.2397 15.056 15.6012 14.8612 15.9951 14.7774C16.389 14.6935 16.7987 14.7241 17.1756 14.8656C18.1312 15.2214 19.124 15.4683 20.1352 15.6014C20.6468 15.6734 21.1141 15.9307 21.4481 16.3241C21.7821 16.7176 21.9596 17.2198 21.9468 17.7354Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      ПОЗВОНИТЬ
+                    </a>
+                  </div>
+                  <!-- card END -->
+                  <!-- card START -->
+                  <div
+                    class="bg-white dark:bg-primary-200 rounded-lg md:rounded-2xl py-[10px] md:py-5 px-[10px] md:px-[22px] card-shadow hover:scale-105 transition-all"
+                  >
+                    <div class="flex flex-col gap-[14px] mb-[22px]">
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Название магазина:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-2 h-[32px] md:h-[40px]"
+                        >
+                          XiaoMi
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Номер телефона:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Адрес:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-3 h-[48px] md:h-[60px]"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      href=""
+                      class="w-full max-w-[189px] rounded-lg bg-primary-100 flex items-center justify-center gap-[14px] text-white text-xs md:text-sm font-bold mx-auto px-2 md:px-[28px] py-[10px] md:py-[14px]"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-4 h-4 md:w-[22px] md:h-[22px]"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M14.6268 5.20487C15.6555 5.40519 16.601 5.90735 17.3421 6.64707C18.0832 7.38679 18.5864 8.33042 18.7871 9.35718M14.6268 1C16.7641 1.23698 18.7572 2.19226 20.2787 3.70899C21.8003 5.22573 22.7599 7.21376 23 9.34666M21.9468 17.7354V20.889C21.948 21.1818 21.8879 21.4716 21.7704 21.7398C21.6529 22.0081 21.4805 22.2489 21.2644 22.4468C21.0482 22.6447 20.793 22.7954 20.5152 22.8892C20.2373 22.983 19.9429 23.0178 19.6507 22.9915C16.4098 22.64 13.2966 21.5346 10.5613 19.7642C8.01656 18.1503 5.85903 15.9968 4.24197 13.4569C2.46198 10.7145 1.35426 7.59218 1.00855 4.34287C0.982229 4.05217 1.01684 3.75919 1.11019 3.48258C1.20353 3.20597 1.35356 2.95178 1.55072 2.73621C1.74788 2.52064 1.98785 2.34841 2.25535 2.23047C2.52286 2.11254 2.81204 2.05149 3.10448 2.05122H6.26417C6.77531 2.0462 7.27084 2.22685 7.65839 2.55952C8.04595 2.89218 8.29909 3.35415 8.37063 3.85931C8.50399 4.86855 8.75132 5.85949 9.10789 6.81323C9.2496 7.18949 9.28026 7.5984 9.19626 7.99152C9.11226 8.38464 8.91711 8.74549 8.63394 9.0313L7.29633 10.3663C8.79567 12.9981 10.9789 15.1772 13.6157 16.6736L14.9533 15.3386C15.2397 15.056 15.6012 14.8612 15.9951 14.7774C16.389 14.6935 16.7987 14.7241 17.1756 14.8656C18.1312 15.2214 19.124 15.4683 20.1352 15.6014C20.6468 15.6734 21.1141 15.9307 21.4481 16.3241C21.7821 16.7176 21.9596 17.2198 21.9468 17.7354Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      ПОЗВОНИТЬ
+                    </a>
+                  </div>
+                  <!-- card END -->
+                  <!-- card START -->
+                  <div
+                    class="bg-white dark:bg-primary-200 rounded-lg md:rounded-2xl py-[10px] md:py-5 px-[10px] md:px-[22px] card-shadow hover:scale-105 transition-all"
+                  >
+                    <div class="flex flex-col gap-[14px] mb-[22px]">
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Название магазина:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-2 h-[32px] md:h-[40px]"
+                        >
+                          XiaoMi
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Номер телефона:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Адрес:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-3 h-[48px] md:h-[60px]"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      href=""
+                      class="w-full max-w-[189px] rounded-lg bg-primary-100 flex items-center justify-center gap-[14px] text-white text-xs md:text-sm font-bold mx-auto px-2 md:px-[28px] py-[10px] md:py-[14px]"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-4 h-4 md:w-[22px] md:h-[22px]"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M14.6268 5.20487C15.6555 5.40519 16.601 5.90735 17.3421 6.64707C18.0832 7.38679 18.5864 8.33042 18.7871 9.35718M14.6268 1C16.7641 1.23698 18.7572 2.19226 20.2787 3.70899C21.8003 5.22573 22.7599 7.21376 23 9.34666M21.9468 17.7354V20.889C21.948 21.1818 21.8879 21.4716 21.7704 21.7398C21.6529 22.0081 21.4805 22.2489 21.2644 22.4468C21.0482 22.6447 20.793 22.7954 20.5152 22.8892C20.2373 22.983 19.9429 23.0178 19.6507 22.9915C16.4098 22.64 13.2966 21.5346 10.5613 19.7642C8.01656 18.1503 5.85903 15.9968 4.24197 13.4569C2.46198 10.7145 1.35426 7.59218 1.00855 4.34287C0.982229 4.05217 1.01684 3.75919 1.11019 3.48258C1.20353 3.20597 1.35356 2.95178 1.55072 2.73621C1.74788 2.52064 1.98785 2.34841 2.25535 2.23047C2.52286 2.11254 2.81204 2.05149 3.10448 2.05122H6.26417C6.77531 2.0462 7.27084 2.22685 7.65839 2.55952C8.04595 2.89218 8.29909 3.35415 8.37063 3.85931C8.50399 4.86855 8.75132 5.85949 9.10789 6.81323C9.2496 7.18949 9.28026 7.5984 9.19626 7.99152C9.11226 8.38464 8.91711 8.74549 8.63394 9.0313L7.29633 10.3663C8.79567 12.9981 10.9789 15.1772 13.6157 16.6736L14.9533 15.3386C15.2397 15.056 15.6012 14.8612 15.9951 14.7774C16.389 14.6935 16.7987 14.7241 17.1756 14.8656C18.1312 15.2214 19.124 15.4683 20.1352 15.6014C20.6468 15.6734 21.1141 15.9307 21.4481 16.3241C21.7821 16.7176 21.9596 17.2198 21.9468 17.7354Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      ПОЗВОНИТЬ
+                    </a>
+                  </div>
+                  <!-- card END -->
+                  <!-- card START -->
+                  <div
+                    class="bg-white dark:bg-primary-200 rounded-lg md:rounded-2xl py-[10px] md:py-5 px-[10px] md:px-[22px] card-shadow hover:scale-105 transition-all"
+                  >
+                    <div class="flex flex-col gap-[14px] mb-[22px]">
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Название магазина:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-2 h-[32px] md:h-[40px]"
+                        >
+                          XiaoMi
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Номер телефона:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Адрес:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-3 h-[48px] md:h-[60px]"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      href=""
+                      class="w-full max-w-[189px] rounded-lg bg-primary-100 flex items-center justify-center gap-[14px] text-white text-xs md:text-sm font-bold mx-auto px-2 md:px-[28px] py-[10px] md:py-[14px]"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-4 h-4 md:w-[22px] md:h-[22px]"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M14.6268 5.20487C15.6555 5.40519 16.601 5.90735 17.3421 6.64707C18.0832 7.38679 18.5864 8.33042 18.7871 9.35718M14.6268 1C16.7641 1.23698 18.7572 2.19226 20.2787 3.70899C21.8003 5.22573 22.7599 7.21376 23 9.34666M21.9468 17.7354V20.889C21.948 21.1818 21.8879 21.4716 21.7704 21.7398C21.6529 22.0081 21.4805 22.2489 21.2644 22.4468C21.0482 22.6447 20.793 22.7954 20.5152 22.8892C20.2373 22.983 19.9429 23.0178 19.6507 22.9915C16.4098 22.64 13.2966 21.5346 10.5613 19.7642C8.01656 18.1503 5.85903 15.9968 4.24197 13.4569C2.46198 10.7145 1.35426 7.59218 1.00855 4.34287C0.982229 4.05217 1.01684 3.75919 1.11019 3.48258C1.20353 3.20597 1.35356 2.95178 1.55072 2.73621C1.74788 2.52064 1.98785 2.34841 2.25535 2.23047C2.52286 2.11254 2.81204 2.05149 3.10448 2.05122H6.26417C6.77531 2.0462 7.27084 2.22685 7.65839 2.55952C8.04595 2.89218 8.29909 3.35415 8.37063 3.85931C8.50399 4.86855 8.75132 5.85949 9.10789 6.81323C9.2496 7.18949 9.28026 7.5984 9.19626 7.99152C9.11226 8.38464 8.91711 8.74549 8.63394 9.0313L7.29633 10.3663C8.79567 12.9981 10.9789 15.1772 13.6157 16.6736L14.9533 15.3386C15.2397 15.056 15.6012 14.8612 15.9951 14.7774C16.389 14.6935 16.7987 14.7241 17.1756 14.8656C18.1312 15.2214 19.124 15.4683 20.1352 15.6014C20.6468 15.6734 21.1141 15.9307 21.4481 16.3241C21.7821 16.7176 21.9596 17.2198 21.9468 17.7354Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      ПОЗВОНИТЬ
+                    </a>
+                  </div>
+                  <!-- card END -->
+                  <!-- card START -->
+                  <div
+                    class="bg-white dark:bg-primary-200 rounded-lg md:rounded-2xl py-[10px] md:py-5 px-[10px] md:px-[22px] card-shadow hover:scale-105 transition-all"
+                  >
+                    <div class="flex flex-col gap-[14px] mb-[22px]">
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Название магазина:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-2 h-[32px] md:h-[40px]"
+                        >
+                          XiaoMi
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Номер телефона:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Адрес:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-3 h-[48px] md:h-[60px]"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      href=""
+                      class="w-full max-w-[189px] rounded-lg bg-primary-100 flex items-center justify-center gap-[14px] text-white text-xs md:text-sm font-bold mx-auto px-2 md:px-[28px] py-[10px] md:py-[14px]"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-4 h-4 md:w-[22px] md:h-[22px]"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M14.6268 5.20487C15.6555 5.40519 16.601 5.90735 17.3421 6.64707C18.0832 7.38679 18.5864 8.33042 18.7871 9.35718M14.6268 1C16.7641 1.23698 18.7572 2.19226 20.2787 3.70899C21.8003 5.22573 22.7599 7.21376 23 9.34666M21.9468 17.7354V20.889C21.948 21.1818 21.8879 21.4716 21.7704 21.7398C21.6529 22.0081 21.4805 22.2489 21.2644 22.4468C21.0482 22.6447 20.793 22.7954 20.5152 22.8892C20.2373 22.983 19.9429 23.0178 19.6507 22.9915C16.4098 22.64 13.2966 21.5346 10.5613 19.7642C8.01656 18.1503 5.85903 15.9968 4.24197 13.4569C2.46198 10.7145 1.35426 7.59218 1.00855 4.34287C0.982229 4.05217 1.01684 3.75919 1.11019 3.48258C1.20353 3.20597 1.35356 2.95178 1.55072 2.73621C1.74788 2.52064 1.98785 2.34841 2.25535 2.23047C2.52286 2.11254 2.81204 2.05149 3.10448 2.05122H6.26417C6.77531 2.0462 7.27084 2.22685 7.65839 2.55952C8.04595 2.89218 8.29909 3.35415 8.37063 3.85931C8.50399 4.86855 8.75132 5.85949 9.10789 6.81323C9.2496 7.18949 9.28026 7.5984 9.19626 7.99152C9.11226 8.38464 8.91711 8.74549 8.63394 9.0313L7.29633 10.3663C8.79567 12.9981 10.9789 15.1772 13.6157 16.6736L14.9533 15.3386C15.2397 15.056 15.6012 14.8612 15.9951 14.7774C16.389 14.6935 16.7987 14.7241 17.1756 14.8656C18.1312 15.2214 19.124 15.4683 20.1352 15.6014C20.6468 15.6734 21.1141 15.9307 21.4481 16.3241C21.7821 16.7176 21.9596 17.2198 21.9468 17.7354Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      ПОЗВОНИТЬ
+                    </a>
+                  </div>
+                  <!-- card END -->
+                  <!-- card START -->
+                  <div
+                    class="bg-white dark:bg-primary-200 rounded-lg md:rounded-2xl py-[10px] md:py-5 px-[10px] md:px-[22px] card-shadow hover:scale-105 transition-all"
+                  >
+                    <div class="flex flex-col gap-[14px] mb-[22px]">
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Название магазина:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-2 h-[32px] md:h-[40px]"
+                        >
+                          XiaoMi
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Номер телефона:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Адрес:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-3 h-[48px] md:h-[60px]"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      href=""
+                      class="w-full max-w-[189px] rounded-lg bg-primary-100 flex items-center justify-center gap-[14px] text-white text-xs md:text-sm font-bold mx-auto px-2 md:px-[28px] py-[10px] md:py-[14px]"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-4 h-4 md:w-[22px] md:h-[22px]"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M14.6268 5.20487C15.6555 5.40519 16.601 5.90735 17.3421 6.64707C18.0832 7.38679 18.5864 8.33042 18.7871 9.35718M14.6268 1C16.7641 1.23698 18.7572 2.19226 20.2787 3.70899C21.8003 5.22573 22.7599 7.21376 23 9.34666M21.9468 17.7354V20.889C21.948 21.1818 21.8879 21.4716 21.7704 21.7398C21.6529 22.0081 21.4805 22.2489 21.2644 22.4468C21.0482 22.6447 20.793 22.7954 20.5152 22.8892C20.2373 22.983 19.9429 23.0178 19.6507 22.9915C16.4098 22.64 13.2966 21.5346 10.5613 19.7642C8.01656 18.1503 5.85903 15.9968 4.24197 13.4569C2.46198 10.7145 1.35426 7.59218 1.00855 4.34287C0.982229 4.05217 1.01684 3.75919 1.11019 3.48258C1.20353 3.20597 1.35356 2.95178 1.55072 2.73621C1.74788 2.52064 1.98785 2.34841 2.25535 2.23047C2.52286 2.11254 2.81204 2.05149 3.10448 2.05122H6.26417C6.77531 2.0462 7.27084 2.22685 7.65839 2.55952C8.04595 2.89218 8.29909 3.35415 8.37063 3.85931C8.50399 4.86855 8.75132 5.85949 9.10789 6.81323C9.2496 7.18949 9.28026 7.5984 9.19626 7.99152C9.11226 8.38464 8.91711 8.74549 8.63394 9.0313L7.29633 10.3663C8.79567 12.9981 10.9789 15.1772 13.6157 16.6736L14.9533 15.3386C15.2397 15.056 15.6012 14.8612 15.9951 14.7774C16.389 14.6935 16.7987 14.7241 17.1756 14.8656C18.1312 15.2214 19.124 15.4683 20.1352 15.6014C20.6468 15.6734 21.1141 15.9307 21.4481 16.3241C21.7821 16.7176 21.9596 17.2198 21.9468 17.7354Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      ПОЗВОНИТЬ
+                    </a>
+                  </div>
+                  <!-- card END -->
+                  <!-- card START -->
+                  <div
+                    class="bg-white dark:bg-primary-200 rounded-lg md:rounded-2xl py-[10px] md:py-5 px-[10px] md:px-[22px] card-shadow hover:scale-105 transition-all"
+                  >
+                    <div class="flex flex-col gap-[14px] mb-[22px]">
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Название магазина:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-2 h-[32px] md:h-[40px]"
+                        >
+                          XiaoMi
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Номер телефона:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h5
+                          class="text-primary-200 dark:text-white text-xs md:text-base font-bold"
+                        >
+                          Адрес:
+                        </h5>
+                        <p
+                          class="text-primary-200 dark:text-white text-xs md:text-sm font-normal line-clamp-3 h-[48px] md:h-[60px]"
+                        >
+                          +99365 65-65-65
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      href=""
+                      class="w-full max-w-[189px] rounded-lg bg-primary-100 flex items-center justify-center gap-[14px] text-white text-xs md:text-sm font-bold mx-auto px-2 md:px-[28px] py-[10px] md:py-[14px]"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-4 h-4 md:w-[22px] md:h-[22px]"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M14.6268 5.20487C15.6555 5.40519 16.601 5.90735 17.3421 6.64707C18.0832 7.38679 18.5864 8.33042 18.7871 9.35718M14.6268 1C16.7641 1.23698 18.7572 2.19226 20.2787 3.70899C21.8003 5.22573 22.7599 7.21376 23 9.34666M21.9468 17.7354V20.889C21.948 21.1818 21.8879 21.4716 21.7704 21.7398C21.6529 22.0081 21.4805 22.2489 21.2644 22.4468C21.0482 22.6447 20.793 22.7954 20.5152 22.8892C20.2373 22.983 19.9429 23.0178 19.6507 22.9915C16.4098 22.64 13.2966 21.5346 10.5613 19.7642C8.01656 18.1503 5.85903 15.9968 4.24197 13.4569C2.46198 10.7145 1.35426 7.59218 1.00855 4.34287C0.982229 4.05217 1.01684 3.75919 1.11019 3.48258C1.20353 3.20597 1.35356 2.95178 1.55072 2.73621C1.74788 2.52064 1.98785 2.34841 2.25535 2.23047C2.52286 2.11254 2.81204 2.05149 3.10448 2.05122H6.26417C6.77531 2.0462 7.27084 2.22685 7.65839 2.55952C8.04595 2.89218 8.29909 3.35415 8.37063 3.85931C8.50399 4.86855 8.75132 5.85949 9.10789 6.81323C9.2496 7.18949 9.28026 7.5984 9.19626 7.99152C9.11226 8.38464 8.91711 8.74549 8.63394 9.0313L7.29633 10.3663C8.79567 12.9981 10.9789 15.1772 13.6157 16.6736L14.9533 15.3386C15.2397 15.056 15.6012 14.8612 15.9951 14.7774C16.389 14.6935 16.7987 14.7241 17.1756 14.8656C18.1312 15.2214 19.124 15.4683 20.1352 15.6014C20.6468 15.6734 21.1141 15.9307 21.4481 16.3241C21.7821 16.7176 21.9596 17.2198 21.9468 17.7354Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      ПОЗВОНИТЬ
+                    </a>
+                  </div>
+                  <!-- card END -->
+                </div>
+                <div class="w-full flex items-center justify-center">
+                  <a
+                    href=""
+                    class="text-primary-200 text-sm font-bold px-[28px] py-[10px] md:py-[14px] rounded-lg bg-white uppercase navlink-shadow hover:bg-primary-200 hover:dark:bg-primary-100 hover:text-white transition-all"
+                    >ПОКАЗАТЬ ЕЩЕ</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- mobile lang modal START -->
+      <div
+        id="mobileLangModalWrapper"
+        class="fixed top-0 left-0 z-50 w-full h-screen flex md:hidden items-center justify-center bg-[#00000080] p-5"
+      >
+        <div
+          id="mobileLangModal"
+          class="modal-shadow w-full max-w-[620px] rounded-2xl px-[22px] md:px-[47px] py-[20px] md:py-[56px] bg-white dark:bg-primary-200 flex flex-col items-center justify-center gap-5"
+        >
+          <h3
+            class="text-primary-100 dark:text-white text-base md:text-3xl font-bold text-center text-balance"
+          >
+            Dil saylan
+          </h3>
+          <!-- active lang class="px-[24px] xl:px-[28px] py-[10px] xl:py-[14px] w-full text-center text-base md:text-xl font-semibold rounded-lg bg-primary-200 dark:bg-primary-100 text-white navlink-shadow" -->
+          <a
+            href="./category.html"
+            class="px-[24px] xl:px-[28px] py-[10px] xl:py-[14px] w-full text-center bg-white text-primary-200 text-base md:text-xl font-semibold rounded-lg hover:bg-primary-200 hover:dark:bg-primary-100 hover:text-white navlink-shadow transition-all"
+            >Rus</a
+          >
+          <a
+            href="./partners.html"
+            class="px-[24px] xl:px-[28px] py-[10px] xl:py-[14px] w-full text-center bg-white text-primary-200 text-base md:text-xl font-semibold rounded-lg hover:bg-primary-200 hover:dark:bg-primary-100 hover:text-white navlink-shadow transition-all"
+            >Tkm</a
+          >
+        </div>
+      </div>
+      <!-- mobile lang modal END -->
+    </main>
+    <footer
+      class="bg-white dark:bg-primary-200 fixed md:static bottom-0 left-0 w-full"
+    >
+      <div class="container">
+        <!-- desktop footer -->
+        <div
+          class="w-full px-5 py-[85.5px] hidden md:flex flex-col md:flex-row items-center justify-between gap-[53.64px]"
+        >
+          <a
+            href="./index.html"
+            id="logo-footer"
+            class="h-[56px] min-w-[206px]"
+          >
+            <img
+              src="/assets/images/white-logo.svg"
+              alt="White Logo"
+              class="white-logo h-full"
+            />
+            <img
+              src="/assets/images/dark-logo.svg"
+              alt="Dark Logo"
+              class="dark-logo h-full"
+              style="display: none"
+            />
+          </a>
+          <div
+            class="w-full flex items-center justify-center gap-4 lg:gap-10 flex-wrap"
+          >
+            <a
+              href=""
+              class="text-primary-200 dark:text-white text-sm font-normal whitespace-nowrap"
+              ><span class="font-semibold">TEL: </span>+993(71) 52-56-56</a
+            >
+            <a
+              href=""
+              class="text-primary-200 dark:text-white text-sm font-normal whitespace-nowrap"
+              ><span class="font-semibold">TEL: </span>+993(71) 52-56-56</a
+            >
+            <a
+              href=""
+              class="text-primary-200 dark:text-white text-sm font-normal whitespace-nowrap"
+              ><span class="font-semibold">E-mail: </span>info@dreampoin.com</a
+            >
+            <a
+              href=""
+              class="text-primary-200 dark:text-white text-sm font-normal whitespace-nowrap"
+              ><span class="font-semibold">Adres: </span>Ashgabat, Maskowskiy
+              koce, 48 jay</a
+            >
+          </div>
+          <div class="flex items-center justify-center gap-3 lg:gap-5">
+            <a
+              href=""
+              class="group w-[50px] h-[50px] flex items-center justify-center rounded-lg hover:bg-primary-200 hover:dark:bg-white transition-all"
+            >
+              <div
+                class="w-10 h-10 rounded-full flex items-center justify-center border-2 border-primary-200 dark:border-white group-hover:border-white group-hover:dark:border-primary-100 text-primary-200 dark:text-white group-hover:text-white group-hover:dark:text-primary-100 p-2 transition-all"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-full h-full"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </a>
+            <a
+              href=""
+              class="group w-[50px] h-[50px] flex items-center justify-center rounded-lg hover:bg-primary-200 hover:dark:bg-white transition-all"
+            >
+              <div
+                class="w-10 h-10 rounded-full flex items-center justify-center border-2 border-primary-200 dark:border-white group-hover:border-white group-hover:dark:border-primary-100 text-primary-200 dark:text-white group-hover:text-white group-hover:dark:text-primary-100 p-2 transition-all"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-full h-full"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </a>
+            <a
+              href=""
+              class="group w-[50px] h-[50px] flex items-center justify-center rounded-lg hover:bg-primary-200 hover:dark:bg-white transition-all"
+            >
+              <div
+                class="w-10 h-10 rounded-full flex items-center justify-center border-2 border-primary-200 dark:border-white group-hover:border-white group-hover:dark:border-primary-100 text-primary-200 dark:text-white group-hover:text-white group-hover:dark:text-primary-100 p-2 transition-all"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-full h-full"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- mobile footer -->
+        <div
+          class="w-full px-5 py-[10px] flex md:hidden items-center justify-evenly gap-5"
+        >
+          <!-- active link START -->
+          <a
+            href=""
+            class="flex flex-col items-center justify-center gap-1 text-center text-primary-200 dark:text-white"
+          >
+            <div
+              class="w-[45px] h-[45px] flex items-center justify-center rounded-lg bg-primary-200 dark:bg-white text-white dark:text-primary-100"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="25"
+                viewBox="0 0 20 25"
+                fill="none"
+              >
+                <path
+                  d="M18.9512 8.81768C17.7654 7.8175 16.5797 6.80271 15.3939 5.79523C14.3973 4.94106 13.3934 4.08688 12.3895 3.24001C10.9127 1.99161 9.34869 1.98431 7.87194 3.23271C6.8535 4.09418 5.83505 4.96296 4.8166 5.83173C3.65993 6.82461 2.49599 7.8248 1.32477 8.81038C0.408171 9.57695 -0.0210324 10.5333 0.000791482 11.716C0.0226154 12.76 0.0153407 13.804 0.0153407 14.848L0.00806611 17.6295C0.00806611 18.7173 0.000791482 19.8051 0.0153407 20.8856C0.0371646 22.9225 1.29568 24.2147 3.31075 24.2512C3.77633 24.2585 4.23463 24.2658 4.69293 24.2658C5.15123 24.2658 5.60226 24.2585 6.05329 24.2512C7.8283 24.2147 8.90494 23.1123 8.93404 21.309C8.94131 20.8126 8.94131 20.3162 8.93404 19.8197C8.93404 19.2284 8.92677 18.6297 8.94131 18.0384C8.95586 17.4251 8.96314 17.2645 10.0762 17.2572C11.3056 17.2645 11.3128 17.4178 11.3274 18.0311C11.3419 18.6662 11.3419 19.2941 11.3347 19.9292C11.3347 20.3454 11.3274 20.7688 11.3347 21.1849C11.3492 23.1999 12.3968 24.2293 14.4337 24.2512C15.2339 24.2585 16.0341 24.2585 16.8416 24.2512C18.973 24.2293 20.2534 22.9298 20.2606 20.7761C20.2679 19.4912 20.2606 18.2136 20.2606 16.9287C20.2606 15.1911 20.2606 13.4463 20.2679 11.7087C20.2825 10.5187 19.846 9.56965 18.9512 8.81768ZM17.4454 20.7031C17.4526 21.0024 17.4017 21.2214 17.3144 21.309C17.2053 21.4112 16.9725 21.4258 16.7979 21.4258C16.1577 21.4039 15.3139 21.3893 14.47 21.4331C14.2663 21.4404 14.2009 21.4112 14.1936 21.4112C14.1863 21.4039 14.15 21.3309 14.1645 21.09C14.1863 20.4914 14.1863 19.8927 14.179 19.2868L14.1718 18.5494C14.1718 17.0528 13.859 16.0526 13.1824 15.3809C12.5059 14.7093 11.4802 14.4173 9.98886 14.4319C9.15955 14.4465 8.50484 14.5706 7.98106 14.8115C6.7953 15.359 6.13331 16.4395 6.11876 17.8558L6.11148 18.4837C6.10421 19.3233 6.08966 20.192 6.12603 21.0535C6.13331 21.3163 6.08966 21.3893 6.08966 21.3893C6.08966 21.3893 6.00964 21.4405 5.74048 21.4258C5.42767 21.4112 5.10758 21.4039 4.79477 21.4039C4.58381 21.4039 4.38012 21.4039 4.17643 21.4112C3.89272 21.4112 3.60901 21.4185 3.3253 21.4112C2.96157 21.4039 2.85245 21.3017 2.85245 20.9367V19.3014C2.84517 16.7608 2.84517 14.1252 2.87427 11.5481C2.87427 11.4167 3.02704 11.1247 3.22345 10.9568C4.54744 9.79597 5.88597 8.64977 7.23178 7.50357C8.04653 6.81001 8.86129 6.10915 9.66878 5.4156C10.0398 5.09437 10.2507 5.09437 10.6072 5.39369C11.3056 5.99964 12.0112 6.5983 12.7096 7.19695C14.1354 8.41615 15.6122 9.67185 17.038 10.9422C17.2344 11.1174 17.409 11.5335 17.4235 11.862C17.4745 12.9279 17.4672 14.0157 17.4526 15.067C17.4526 15.4831 17.4454 15.8993 17.4454 16.3154V17.5857C17.4308 18.6297 17.4235 19.6664 17.4454 20.7031Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+            <p class="text-[10px] font-semibold">Главная</p>
+          </a>
+          <!-- active link END -->
+
+          <a
+            href=""
+            class="group flex flex-col items-center justify-center gap-1 text-center text-[#2E3A4C4D] dark:text-[#FFFFFF4D] hover:text-primary-200 hover:dark:text-white transition-all"
+          >
+            <div
+              class="w-[45px] h-[45px] flex items-center justify-center rounded-lg group-hover:bg-primary-200 group-hover:dark:bg-white group-hover:text-white group-hover:dark:text-primary-100 transition-all"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                viewBox="0 0 25 25"
+                fill="none"
+              >
+                <path
+                  d="M9.91667 0.875H2.16667C1.8241 0.875 1.49555 1.01109 1.25332 1.25332C1.01109 1.49555 0.875 1.8241 0.875 2.16667V9.91667C0.875 10.2592 1.01109 10.5878 1.25332 10.83C1.49555 11.0722 1.8241 11.2083 2.16667 11.2083H9.91667C10.2592 11.2083 10.5878 11.0722 10.83 10.83C11.0722 10.5878 11.2083 10.2592 11.2083 9.91667V2.16667C11.2083 1.8241 11.0722 1.49555 10.83 1.25332C10.5878 1.01109 10.2592 0.875 9.91667 0.875ZM8.625 8.625H3.45833V3.45833H8.625V8.625ZM22.8333 13.7917H15.0833C14.7408 13.7917 14.4122 13.9278 14.17 14.17C13.9278 14.4122 13.7917 14.7408 13.7917 15.0833V22.8333C13.7917 23.1759 13.9278 23.5044 14.17 23.7467C14.4122 23.9889 14.7408 24.125 15.0833 24.125H22.8333C23.1759 24.125 23.5044 23.9889 23.7467 23.7467C23.9889 23.5044 24.125 23.1759 24.125 22.8333V15.0833C24.125 14.7408 23.9889 14.4122 23.7467 14.17C23.5044 13.9278 23.1759 13.7917 22.8333 13.7917ZM21.5417 21.5417H16.375V16.375H21.5417V21.5417ZM18.9583 0.875C16.1089 0.875 13.7917 3.19225 13.7917 6.04167C13.7917 8.89108 16.1089 11.2083 18.9583 11.2083C21.8077 11.2083 24.125 8.89108 24.125 6.04167C24.125 3.19225 21.8077 0.875 18.9583 0.875ZM18.9583 8.625C17.5336 8.625 16.375 7.46637 16.375 6.04167C16.375 4.61696 17.5336 3.45833 18.9583 3.45833C20.383 3.45833 21.5417 4.61696 21.5417 6.04167C21.5417 7.46637 20.383 8.625 18.9583 8.625ZM6.04167 13.7917C3.19225 13.7917 0.875 16.1089 0.875 18.9583C0.875 21.8077 3.19225 24.125 6.04167 24.125C8.89108 24.125 11.2083 21.8077 11.2083 18.9583C11.2083 16.1089 8.89108 13.7917 6.04167 13.7917ZM6.04167 21.5417C4.61696 21.5417 3.45833 20.383 3.45833 18.9583C3.45833 17.5336 4.61696 16.375 6.04167 16.375C7.46637 16.375 8.625 17.5336 8.625 18.9583C8.625 20.383 7.46637 21.5417 6.04167 21.5417Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+            <p class="text-[10px] font-semibold">Категории</p>
+          </a>
+          <a
+            href=""
+            class="group flex flex-col items-center justify-center gap-1 text-center text-[#2E3A4C4D] dark:text-[#FFFFFF4D] hover:text-primary-200 hover:dark:text-white transition-all"
+          >
+            <div
+              class="w-[45px] h-[45px] flex items-center justify-center rounded-lg group-hover:bg-primary-200 group-hover:dark:bg-white group-hover:text-white group-hover:dark:text-primary-100 transition-all"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="31"
+                height="19"
+                viewBox="0 0 31 19"
+                fill="none"
+              >
+                <path
+                  d="M14.4815 18.575C14.7166 18.3335 14.9349 18.1003 15.1532 17.8837C15.6738 17.3589 16.2027 16.8425 16.7233 16.3177C16.7989 16.2427 16.8661 16.1345 16.8745 16.0345C16.908 15.3265 16.7989 14.6435 16.3203 14.0854C15.9005 13.6023 15.3379 13.4523 14.7166 13.4773C14.3724 13.494 14.3724 13.494 14.2632 13.1858C13.8854 12.1029 13.0793 11.5948 11.929 11.7281C11.8199 11.7448 11.7107 11.7531 11.5848 11.7614C11.5344 11.6031 11.4924 11.4532 11.442 11.3116C11.081 10.2954 10.275 9.87059 9.24221 9.90391C9.0407 9.91224 8.97353 9.85393 8.91475 9.67901C8.69645 8.97932 8.30182 8.39625 7.55455 8.20467C7.20191 8.12137 6.81568 8.16302 6.44624 8.17135C6.36228 8.17135 6.26992 8.24631 6.21114 8.31295C5.47227 9.02097 4.73339 9.74565 3.99452 10.4537C3.97773 10.4703 3.94414 10.487 3.96093 10.4787C3.69225 10.2371 3.43197 10.0039 3.17168 9.76231C2.49158 9.12925 1.80308 8.4962 0.946661 8.08805C0.887887 8.07139 0.837509 8.0464 0.778735 8.02142C0.468071 7.91313 0.442882 7.88814 0.577223 7.58827C0.845905 6.98021 1.13978 6.38881 1.40846 5.78075C2.0046 4.43968 2.59234 3.09861 3.18847 1.75754C3.31442 1.46601 3.44036 1.17447 3.56631 0.882935C3.70905 0.566409 4.17084 0.408146 4.59905 0.566409C4.89292 0.683024 5.17 0.849616 5.44708 0.999549C6.04322 1.34106 6.70653 1.4077 7.36983 1.49933C8.11711 1.59928 8.8224 1.42436 9.52769 1.20779C10.7619 0.841286 12.013 0.54142 13.2976 0.466454C13.709 0.441465 14.1289 0.483113 14.5403 0.533091C14.7166 0.54975 14.8929 0.658035 15.0609 0.724672C15.0692 0.75799 15.086 0.791309 15.0944 0.824627C14.9349 0.957901 14.7754 1.08285 14.6242 1.22445C13.6503 2.12405 12.6847 3.03198 11.7107 3.9399C11.2993 4.32307 10.8963 4.72289 10.4765 5.08106C10.2582 5.27264 10.1658 5.49754 10.1238 5.77242C10.0567 6.3305 10.1658 6.83028 10.5436 7.25509C10.9467 7.70489 11.3329 8.18801 11.971 8.32128C13.0038 8.54618 13.9609 8.41291 14.8677 7.82983C15.9089 7.16346 16.8828 6.43879 17.8064 5.61416C18.1171 5.33095 18.0247 5.34761 18.3438 5.58917C19.9055 6.77197 21.442 7.9881 22.861 9.33749C23.4907 9.9289 24.0953 10.5453 24.5823 11.27C25.0357 11.953 25.0189 13.0275 24.5319 13.6106C24.2548 13.9438 23.8686 14.0521 23.4656 14.0604C23.1969 14.0687 22.9282 14.0437 22.6679 14.0187C22.5336 14.0021 22.4664 14.0187 22.4496 14.177C22.3153 15.2015 21.5008 15.8429 20.4681 15.7513C20.1658 15.7263 19.8719 15.668 19.5445 15.6264C19.5361 15.7013 19.5193 15.7846 19.5193 15.8596C19.4773 16.6259 18.898 17.2423 18.1255 17.3089C17.882 17.3256 17.6385 17.3173 17.395 17.3006C17.2271 17.2839 17.1515 17.3256 17.076 17.4839C16.9416 17.7504 16.7905 18.017 16.6058 18.2502C16.06 18.9249 15.1952 18.9915 14.4815 18.575Z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M17.7717 0.166626C18.519 0.183285 19.2159 0.458163 19.9128 0.741369C20.383 0.932951 20.8783 1.08288 21.3653 1.20783C21.8439 1.33277 22.3309 1.43273 22.8263 1.49103C24.1865 1.65763 25.4291 1.31611 26.5458 0.533129C26.8481 0.324889 27.2679 0.533129 27.4358 0.94128C27.6877 1.53268 27.948 2.11576 28.2251 2.6905C28.6953 3.68172 29.1739 4.66462 29.6525 5.65584C29.9044 6.17228 30.1479 6.68871 30.3997 7.20515C30.5677 7.555 30.5089 7.89651 30.1814 8.09642C28.8968 8.8794 27.8389 9.93726 26.6886 10.8785C26.2352 11.245 25.8573 11.1367 25.5047 10.7786C24.7574 10.0122 24.0521 9.20426 23.2965 8.44626C21.9866 7.13851 20.6096 5.91406 19.0311 4.93117C18.8128 4.79789 18.5777 4.68128 18.3594 4.548C18.2083 4.45638 18.0992 4.47304 17.9648 4.58965C16.9321 5.48092 15.8741 6.35553 14.7154 7.08854C13.9514 7.57165 13.1201 7.75491 12.2301 7.53834C11.7935 7.43005 11.55 7.08854 11.3065 6.75535C11.0714 6.42217 10.9455 6.04733 11.1218 5.65584C11.189 5.50591 11.3485 5.38097 11.4913 5.26435C13.3385 3.815 15.0681 2.2407 16.6802 0.533129C16.9824 0.224933 17.3519 0.166626 17.7717 0.166626Z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M10.148 16.9425C9.72819 16.9091 9.31677 16.6676 9.10687 16.1512C8.91375 15.668 8.98932 15.2016 9.35876 14.8184C10.0473 14.1104 10.7525 13.4107 11.4578 12.7193C11.97 12.2112 12.7509 12.2196 13.2714 12.7277C13.75 13.1941 13.7584 13.9855 13.2798 14.4852C12.5913 15.1849 11.9028 15.8763 11.2059 16.5676C10.9289 16.8342 10.6434 16.9425 10.148 16.9425Z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M6.99992 8.82937C7.62125 8.82937 8.04946 9.10424 8.25097 9.66233C8.4273 10.1538 8.33494 10.6036 7.94871 10.9784C7.26861 11.6531 6.58011 12.3278 5.9168 13.0275C5.44661 13.5273 4.59019 13.5523 4.07801 13.0525C3.59102 12.5777 3.59102 11.7697 4.0948 11.2616C4.76651 10.5703 5.455 9.88723 6.1435 9.2042C6.38699 8.95431 6.68087 8.80438 6.99992 8.82937Z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M14.808 14.1438C15.4881 14.1604 15.8827 14.427 16.0842 14.9101C16.2857 15.3766 16.2186 15.8514 15.8575 16.2262C15.1606 16.9509 14.4553 17.6589 13.7332 18.3669C13.0615 19.0249 12.0204 18.8167 11.6594 17.9504C11.4578 17.4673 11.5502 17.0008 11.9112 16.6177C12.5914 15.918 13.2798 15.2266 13.9683 14.5353C14.2454 14.2771 14.5645 14.1355 14.808 14.1438Z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M9.63741 10.6786C10.1748 10.7286 10.5862 10.9618 10.7961 11.4699C10.9976 11.953 10.922 12.4195 10.561 12.8026C10.0404 13.3524 9.49467 13.8855 8.95731 14.4186C8.7474 14.6268 8.55429 14.8517 8.32759 15.035C7.81541 15.4515 7.08493 15.3765 6.62314 14.885C6.17813 14.4103 6.16974 13.6689 6.61474 13.2025C7.32843 12.4695 8.05891 11.7448 8.78099 11.0201C9.01608 10.7785 9.30995 10.7036 9.63741 10.6786Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+            <p class="text-[10px] font-semibold">Партнерам</p>
+          </a>
+          <span
+            id="mobileLang"
+            class="group flex flex-col items-center justify-center gap-1 text-center text-[#2E3A4C4D] dark:text-[#FFFFFF4D] hover:text-primary-200 hover:dark:text-white transition-all cursor-pointer"
+          >
+            <div
+              class="w-[45px] h-[45px] flex items-center justify-center rounded-lg group-hover:bg-primary-200 group-hover:dark:bg-white group-hover:text-white group-hover:dark:text-primary-100 transition-all"
+            >
+              <svg
+                width="31"
+                height="31"
+                viewBox="0 0 31 31"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M28 15.5C28 22.4036 22.4036 28 15.5 28M28 15.5C28 8.59644 22.4036 3 15.5 3M28 15.5H3M15.5 28C8.59644 28 3 22.4036 3 15.5M15.5 28C18.6266 24.5771 20.4034 20.135 20.5 15.5C20.4034 10.865 18.6266 6.42294 15.5 3M15.5 28C12.3734 24.5771 10.5966 20.135 10.5 15.5C10.5966 10.865 12.3734 6.42294 15.5 3M3 15.5C3 8.59644 8.59644 3 15.5 3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <p class="text-[10px] font-semibold">Язык</p>
+          </span>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const tabButtons = document.querySelectorAll(".tab-btn");
+        const tabContents = document.querySelectorAll(".tab-content");
+
+        tabButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            const tabId = this.getAttribute("data-tab");
+
+            // Remove active state from all buttons and tabs
+            tabButtons.forEach((btn) => btn.classList.remove("active"));
+            tabContents.forEach((content) => {
+              content.classList.remove("active");
+              content.classList.add("hiddenTab");
+            });
+
+            // Add active state to the clicked button
+            this.classList.add("active");
+
+            // Show the corresponding tab content
+            const targetContent = document.querySelector(
+              `.tab-content[data-content="${tabId}"]`
+            );
+            targetContent.classList.remove("hiddenTab");
+            setTimeout(() => targetContent.classList.add("active"), 10); // Delay to trigger fade-in animation
+          });
+        });
+      });
+    </script>
+    <script src="/main.js"></script>
+  </body>
+</html>

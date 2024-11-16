@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  max-width: 1480px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 769px) {
+  .container {
+    max-width: 1480px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+nav {
+  box-shadow: 0px 5px 15px 0px rgba(46, 58, 76, 0.3);
+}
+
+.dark nav {
+  box-shadow: 0px 5px 15px 0px rgba(66, 112, 183, 0.3);
+}
+
+footer {
+  box-shadow: 0px -5px 15px 0px rgba(46, 58, 76, 0.3);
+}
+
+.dark footer {
+  box-shadow: 0px -5px 15px 0px rgba(66, 112, 183, 0.3);
+}
+
+.navlink-shadow {
+  box-shadow: 0px 0px 15px 0px rgba(46, 58, 76, 0.3);
+}
+
+.shadow {
+  box-shadow: 0px 0px 15px 0px rgba(46, 58, 76, 0.3);
+}
+
+.card-shadow {
+  box-shadow: 0px 0px 15px 0px rgba(66, 112, 183, 0.3);
+}
+
+.dark .shadow {
+  box-shadow: 0px 0px 15px 0px rgba(66, 112, 183, 1);
+}
+
+.modal-shadow {
+  box-shadow: 0px 0px 15px 0px rgba(66, 112, 183, 1);
+}
+
+.tab-content {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.tab-content.active {
+  opacity: 1;
+}
+
+.tab-content.hiddenTab {
+  display: none;
+}
+
+.tab-btn.active {
+  background-color: #2e3a4c;
+  color: #fff;
+}
+
+.dark .tab-btn.active {
+  background-color: #4270b7;
+  color: #fff;
+}
+
+@media (min-width: 769px) and (max-width: 1279px) {
+  .card:nth-child(5) {
+    display: none;
+  }
+}
+
+#mobileLangModalWrapper {
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s all ease;
+}
+
+#mobileLangModalWrapper #mobileLangModal {
+  transform: scale(0.7);
+  transition: 0.3s all ease;
+}
+
+#mobileLangModalWrapper.active {
+  opacity: 1;
+  pointer-events: all;
+  transition: 0.3s all ease;
+}
+
+#mobileLangModalWrapper.active #mobileLangModal {
+  transform: scale(1);
+  transition: 0.3s all ease;
+}
+
+#notificationWrapper {
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s all ease;
+}
+
+#notificationWrapper #notification {
+  transform: scale(0.7);
+  transition: 0.3s all ease;
+}
+
+#notificationWrapper.active {
+  opacity: 1;
+  pointer-events: all;
+  transition: 0.3s all ease;
+}
+
+#notificationWrapper.active #notification {
+  transform: scale(1);
+  transition: 0.3s all ease;
+}
